@@ -1,0 +1,2143 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<resource version="2.3.0.1" xmlns="http://www.wxwidgets.org/wxxrc">
+    <object class="wxPanel" name="GeneralPanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>General</label>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL|wxFIXED_MINSIZE</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Nick</label>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_LEFT|wxALL|wxFIXED_MINSIZE</flag>
+                        <border>5</border>
+                        <object class="wxTextCtrl" name="ID_NICK">
+                            <size>200,-1</size>
+                            <value>Avi</value>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL|wxFIXED_MINSIZE</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Language</label>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_LEFT|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxChoice" name="ID_LANGUAGE">
+                            <size>200,-1</size>
+                            <content>
+                                <item>English (United States)</item>
+                            </content>
+                            <selection>0</selection>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Miscellaneous</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_BEEP">
+                            <style>wxCHK_2STATE</style>
+                            <label>Beep on errors</label>
+                            <checked>1</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_TOFRONT">
+                            <style>wxCHK_2STATE</style>
+                            <label>Bring to front on link click</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_PROMPTEXIT">
+                            <style>wxCHK_2STATE</style>
+                            <label>Prompt on exit</label>
+                            <checked>1</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxStaticBoxSizer" name="wxID_ANY">
+                            <orient>wxHORIZONTAL</orient>
+                            <label>Startup</label>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxRIGHT|wxTOP|wxBOTTOM</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="ID_CHECKVER">
+                                            <style>wxCHK_2STATE</style>
+                                            <label>Check for a new version</label>
+                                            <checked>1</checked>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="ID_SPLASHSCR">
+                                            <style>wxCHK_2STATE</style>
+                                            <label>Show splashscreen</label>
+                                            <checked>1</checked>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="ID_STARTMIN">
+                                            <style>wxCHK_2STATE</style>
+                                            <label>Start minimized</label>
+                                            <checked>0</checked>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW|wxLEFT|wxRIGHT</flag>
+                                        <border>5</border>
+                                        <object class="wxCheckBox" name="ID_STARTWITHOS">
+                                            <style>wxCHK_2STATE</style>
+                                            <label>Start with Operating System</label>
+                                            <checked>0</checked>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_TOP|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_HORIZONTAL|wxLEFT|wxRIGHT</flag>
+                                        <border>5</border>
+                                        <option>1</option>
+                                        <object class="wxSlider" name="ID_CHECKVERSLIDER">
+                                            <size>100,20</size>
+                                            <style>wxSL_HORIZONTAL|wxSTATIC_BORDER</style>
+                                            <value>2</value>
+                                            <min>2</min>
+                                            <max>7</max>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_HORIZONTAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="ID_CHECKVERDAYS">
+                                            <label>2 Days</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_EDITWEBSRVS">
+                                    <label>Edit Web Services</label>
+                                </object>
+                            </object>
+                            <object class="spacer">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <size>50,5</size>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_TAKEELINKS">
+                                    <label>eD2K Links</label>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="DisplayPanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>Display</label>
+            <object class="sizeritem">
+                <flag>wxGROW|wxRIGHT</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Progressbar style:</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxSlider" name="ID_PRGSBARSTYLE">
+                            <style>wxSL_HORIZONTAL</style>
+                            <value>2</value>
+                            <min>2</min>
+                            <max>7</max>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxRIGHT</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Tooltip delay time (in seconds):</label>
+                        </object>
+                    </object>
+                    <object class="spacer">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                        <border>5</border>
+                        <size>5,5</size>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxTextCtrl" name="ID_TOOLTIPDELAY">
+                            <size>25,-1</size>
+                            <style>wxTE_RIGHT</style>
+                            <value>1</value>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_MIN2TRAY">
+                    <style>wxCHK_2STATE</style>
+                    <label>Minimize to system tray</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_DBLCLICKEXPEND">
+                    <style>wxCHK_2STATE</style>
+                    <label>Download list double click to expend</label>
+                    <checked>1</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_RATINGICON">
+                    <style>wxCHK_2STATE</style>
+                    <label>Indicate downloads with comments/rating by icon</label>
+                    <checked>1</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_PERCENTAGE">
+                    <style>wxCHK_2STATE</style>
+                    <label>Show precentage of download completion in progressbar</label>
+                    <checked>1</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_TITLERATES">
+                    <style>wxCHK_2STATE</style>
+                    <label>Show transfer rates on title</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_TABSINFO">
+                    <style>wxCHK_2STATE</style>
+                    <label>Show download info on category tabs</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_CLEARCOMPLETE">
+                    <style>wxCHK_2STATE</style>
+                    <label>Auto clear completed downloads</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Save CPU &amp;&amp; memory usage</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_KNWNCLSLIST">
+                            <style>wxCHK_2STATE</style>
+                            <label>Disable Known Clients list</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_QUEUELIST">
+                            <style>wxCHK_2STATE</style>
+                            <label>Disable Queue list</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_UPDATEQUEUE">
+                            <style>wxCHK_2STATE</style>
+                            <label>Don't update Queue list in real time</label>
+                            <checked>1</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_GRAPHSONRESIZE">
+                            <style>wxCHK_2STATE</style>
+                            <label>Don't recreate statistic graphs on resize</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxTOP|wxBOTTOM|wxFIXED_MINSIZE</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Font for Server-, Message-, and IRC-Window:</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxTOP|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxButton" name="ID_SELECTFONT">
+                            <label>Select Font...</label>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxCheckBox" name="ID_AUTOCOMPLETION">
+                            <style>wxCHK_2STATE</style>
+                            <label>Auto completion (history function)</label>
+                            <checked>1</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxFIXED_MINSIZE</flag>
+                        <border>5</border>
+                        <object class="wxButton" name="ID_RESETCOMPLETION">
+                            <label>Reset</label>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="ConnectionPanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>Connection</label>
+            <object class="sizeritem">
+                <flag>wxGROW</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_TOP|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxStaticBoxSizer" name="wxID_ANY">
+                            <orient>wxVERTICAL</orient>
+                            <label>Capacities</label>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_LEFT|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Download</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_LEFT</flag>
+                                <border>5</border>
+                                <object class="wxBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxTextCtrl" name="ID_DOWNCAP">
+                                            <size>50,-1</size>
+                                            <style>wxTE_RIGHT</style>
+                                            <value>96</value>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxTOP|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="wxID_STATIC">
+                                            <label>KB/s</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_LEFT|wxLEFT|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Upload</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_LEFT</flag>
+                                <border>5</border>
+                                <object class="wxBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxTextCtrl" name="ID_UPCAP">
+                                            <size>50,-1</size>
+                                            <style>wxTE_RIGHT</style>
+                                            <value>12</value>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxTOP|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="wxID_STATIC">
+                                            <label>KB/s</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_TOP|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxStaticBoxSizer" name="wxID_ANY">
+                            <orient>wxVERTICAL</orient>
+                            <label>Limits</label>
+                            <object class="sizeritem">
+                                <flag>wxGROW</flag>
+                                <border>5</border>
+                                <object class="wxBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_TOP|wxLEFT|wxRIGHT|wxTOP</flag>
+                                        <border>5</border>
+                                        <option>1</option>
+                                        <object class="wxCheckBox" name="ID_DOWNLIMITCHECK">
+                                            <style>wxCHK_2STATE</style>
+                                            <label>Download limit</label>
+                                            <checked>1</checked>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="wxID_STATIC">
+                                            <label>32 KB/s</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxTOP|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxSlider" name="ID_DOWNLIMITSLIDER">
+                                    <style>wxSL_HORIZONTAL</style>
+                                    <value>0</value>
+                                    <min>0</min>
+                                    <max>100</max>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW</flag>
+                                <border>5</border>
+                                <object class="wxBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_TOP|wxLEFT|wxRIGHT|wxTOP</flag>
+                                        <border>5</border>
+                                        <option>1</option>
+                                        <object class="wxCheckBox" name="ID_UPLIMITCHECK">
+                                            <style>wxCHK_2STATE</style>
+                                            <label>Upload limit</label>
+                                            <checked>1</checked>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                        <border>5</border>
+                                        <object class="wxStaticText" name="wxID_STATIC">
+                                            <label>8 KB/s</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxTOP</flag>
+                                <border>7</border>
+                                <object class="wxSlider" name="ID_UPLIMITSLIDER">
+                                    <style>wxSL_HORIZONTAL</style>
+                                    <value>0</value>
+                                    <min>0</min>
+                                    <max>100</max>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Client ports</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW</flag>
+                                <border>5</border>
+                                <object class="wxBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="wxID_STATIC">
+                                                    <label>TCP</label>
+                                                </object>
+                                            </object>
+                                            <object class="spacer">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxBOTTOM</flag>
+                                                <border>5</border>
+                                                <size>2,5</size>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="ID_TCPPORT">
+                                                    <value>4662</value>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxGROW</flag>
+                                        <border>5</border>
+                                        <object class="wxBoxSizer">
+                                            <orient>wxHORIZONTAL</orient>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                                <border>5</border>
+                                                <object class="wxStaticText" name="wxID_STATIC">
+                                                    <label>UDP</label>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                                <border>5</border>
+                                                <object class="wxTextCtrl" name="ID_UDPPORT">
+                                                    <value>4672</value>
+                                                </object>
+                                            </object>
+                                            <object class="sizeritem">
+                                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                                <border>5</border>
+                                                <option>1</option>
+                                                <object class="wxCheckBox" name="ID_UDPPORTDISABLE">
+                                                    <style>wxCHK_2STATE</style>
+                                                    <label>Disable</label>
+                                                    <checked>0</checked>
+                                                </object>
+                                            </object>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL</flag>
+                                <border>5</border>
+                                <object class="wxBoxSizer">
+                                    <orient>wxHORIZONTAL</orient>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                        <border>5</border>
+                                        <object class="wxButton" name="ID_TESTPORTS">
+                                            <label>Test Ports</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT</flag>
+                        <border>5</border>
+                        <object class="wxButton" name="ID_OPENPORTS">
+                            <label>Open these ports on internal WinXP firewall</label>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_TOP|wxALL</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxStaticBoxSizer" name="wxID_ANY">
+                            <orient>wxVERTICAL</orient>
+                            <label>Max sources/file</label>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_LEFT|wxLEFT|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Hard limit</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_LEFT|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxTextCtrl" name="ID_MAXSOURCES">
+                                    <value>1500</value>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_TOP|wxALL</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxStaticBoxSizer" name="wxID_ANY">
+                            <orient>wxVERTICAL</orient>
+                            <label>Connection limit</label>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_LEFT|wxLEFT|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Max. connections</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_LEFT|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxTextCtrl" name="ID_MAXCONNECTIONS">
+                                    <value>3500</value>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_TOP</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxBoxSizer">
+                            <orient>wxVERTICAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_AUTOCONNECT">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Autoconnect on startup</label>
+                                    <checked>0</checked>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_RECONNECTLOSS">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Reconnect on loss</label>
+                                    <checked>1</checked>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_SHOWOVERHEAD">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Show overhead bandwidth</label>
+                                    <checked>0</checked>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxButton" name="ID_WIZARD">
+                            <label>Wizard...</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_TOP|wxLEFT|wxRIGHT</flag>
+                        <border>5</border>
+                        <object class="wxStaticBoxSizer" name="wxID_ANY">
+                            <orient>wxVERTICAL</orient>
+                            <label>Networks</label>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_KADNETWORK">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Kad</label>
+                                    <checked>1</checked>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_EDKNETWORK">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>eDonkey</label>
+                                    <checked>1</checked>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="ProxyPanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>Proxy</label>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>General</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_ENABLEPROXY">
+                            <style>wxCHK_2STATE</style>
+                            <label>Enable proxy</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Proxy type:</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <option>2</option>
+                                <object class="wxChoice" name="ID_PROXYTYPE">
+                                    <content>
+                                        <item>No proxy</item>
+                                        <item>Socks 4</item>
+                                        <item>Socks 4a</item>
+                                        <item>Socks 5</item>
+                                        <item>HTTP 1.1</item>
+                                    </content>
+                                    <selection>0</selection>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Proxy host:</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <option>2</option>
+                                <object class="wxTextCtrl" name="ID_PROXYHOST">
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Proxy port:</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <option>2</option>
+                                <object class="wxTextCtrl" name="ID_PROXYPORT">
+                                    <value>1080</value>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Authentication</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_ENABLEAUTH">
+                            <style>wxCHK_2STATE</style>
+                            <label>Enable authentication</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Username:</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <option>2</option>
+                                <object class="wxTextCtrl" name="ID_AUTHUSERNAME">
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Password:</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <option>2</option>
+                                <object class="wxTextCtrl" name="ID_AUTHPASS">
+                                    <style>wxTE_PASSWORD</style>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_SERVERNOPROXY">
+                    <style>wxCHK_2STATE</style>
+                    <label>Automatic server connect without proxy</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="ServerPanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>Server</label>
+            <object class="sizeritem">
+                <flag>wxGROW</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Remove dead servers after</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxTextCtrl" name="ID_DEADRETRIES">
+                            <size>25,-1</size>
+                            <value>1</value>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>retries</label>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxCheckBox" name="ID_UPDATESERVERLIST">
+                            <style>wxCHK_2STATE</style>
+                            <label>Auto-update serverlist at startup</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxButton" name="ID_UPDATELIST">
+                            <label>List...</label>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_UPDATEONSERVER">
+                    <style>wxCHK_2STATE</style>
+                    <label>Update server list when connecting to a server</label>
+                    <checked>1</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_UPDATEONCLIENT">
+                    <style>wxCHK_2STATE</style>
+                    <label>Update server list when a client connects</label>
+                    <checked>1</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_SERVERSPRIORITIES">
+                    <style>wxCHK_2STATE</style>
+                    <label>Use priority system</label>
+                    <checked>1</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_SMARTLOWID">
+                    <style>wxCHK_2STATE</style>
+                    <label>Use smart Low-ID check on connect</label>
+                    <checked>1</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_SAFECONNECT">
+                    <style>wxCHK_2STATE</style>
+                    <label>Safe connect</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_AUTOCONNECTSTATIC">
+                    <style>wxCHK_2STATE</style>
+                    <label>Autoconnect to servers in static list only</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_MANUALLYHIGHPRIO">
+                    <style>wxCHK_2STATE</style>
+                    <label>Set manually added servers to high priority</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="DirectoriesPanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>Directories</label>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxHORIZONTAL</orient>
+                    <label>Incoming files</label>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxTextCtrl" name="ID_INCOMINGDIR">
+                            <value>C:\Program Files\eMule\Incoming</value>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxButton" name="ID_BROWSEINCOMING">
+                            <label>Browse...</label>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxHORIZONTAL</orient>
+                    <label>Temporary files</label>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxTextCtrl" name="ID_TEMPDIR">
+                            <value>C:\Program Files\eMule\Temp</value>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxButton" name="ID_TEMPBROWSE">
+                            <label>Browse...</label>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <option>1</option>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Shared directories (Ctrl+Click includes subdirectories)</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <option>2</option>
+                        <object class="wxTreeCtrl" name="ID_SHAREDDIRS">
+                            <size>100,100</size>
+                            <style>wxTR_SINGLE</style>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxListCtrl" name="ID_UNCLIST">
+                                    <size>100,75</size>
+                                    <style>wxLC_REPORT</style>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL</flag>
+                                <border>5</border>
+                                <object class="wxBoxSizer">
+                                    <orient>wxVERTICAL</orient>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_HORIZONTAL|wxRIGHT|wxTOP|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxButton" name="ID_UNCADD">
+                                            <size>25,-1</size>
+                                            <label>+</label>
+                                        </object>
+                                    </object>
+                                    <object class="spacer">
+                                        <flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+                                        <border>5</border>
+                                        <size>5,10</size>
+                                    </object>
+                                    <object class="sizeritem">
+                                        <flag>wxALIGN_CENTER_HORIZONTAL|wxRIGHT|wxTOP|wxBOTTOM</flag>
+                                        <border>5</border>
+                                        <object class="wxButton" name="ID_UNCREMOVE">
+                                            <size>25,-1</size>
+                                            <label>-</label>
+                                        </object>
+                                    </object>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="FilesPanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>Files</label>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxHORIZONTAL</orient>
+                    <label>See my shared files/directories</label>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxRadioButton" name="ID_RADIOBUTTON">
+                            <style>wxRB_GROUP</style>
+                            <label>Everybody</label>
+                            <value>0</value>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxRadioButton" name="ID_RADIOBUTTON1">
+                            <label>Friends</label>
+                            <value>0</value>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxRadioButton" name="ID_RADIOBUTTON2">
+                            <label>Nobody</label>
+                            <value>1</value>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Initialisations</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX38">
+                            <style>wxCHK_2STATE</style>
+                            <label>Add files to download in paused mode</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX39">
+                            <style>wxCHK_2STATE</style>
+                            <label>Add new shared files with auto priority</label>
+                            <checked>1</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX40">
+                            <style>wxCHK_2STATE</style>
+                            <label>Add new downloads with auto priority</label>
+                            <checked>1</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxCheckBox" name="ID_CHECKBOX41">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Auto cleanup file names of new downloads</label>
+                                    <checked>0</checked>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_BUTTON11">
+                                    <label>Edit...</label>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_CHECKBOX42">
+                    <style>wxCHK_2STATE</style>
+                    <label>Try to transfer full chunks to all uploads</label>
+                    <checked>1</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_CHECKBOX43">
+                    <style>wxCHK_2STATE</style>
+                    <label>Try to download preview chunks first</label>
+                    <checked>1</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_CHECKBOX44">
+                    <style>wxCHK_2STATE</style>
+                    <label>Watch clipboard for eD2K file links</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_CHECKBOX45">
+                    <style>wxCHK_2STATE</style>
+                    <label>Use advanced calculation method for remaining time</label>
+                    <checked>1</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_CHECKBOX46">
+                    <style>wxCHK_2STATE</style>
+                    <label>Start next paused file when a file completes</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="spacer">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                        <border>5</border>
+                        <size>5,5</size>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxCheckBox" name="ID_CHECKBOX47">
+                            <style>wxCHK_2STATE</style>
+                            <label>Prefer same category</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW</flag>
+                <border>5</border>
+                <object class="wxBoxSizer">
+                    <orient>wxHORIZONTAL</orient>
+                    <object class="spacer">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                        <border>5</border>
+                        <size>5,5</size>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxCheckBox" name="ID_CHECKBOX48">
+                            <style>wxCHK_2STATE</style>
+                            <label>Only in same category</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_CHECKBOX">
+                    <style>wxCHK_2STATE</style>
+                    <label>Remember downloaded files</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxCheckBox" name="ID_CHECKBOX1">
+                    <style>wxCHK_2STATE</style>
+                    <label>Remember cancelled files</label>
+                    <checked>0</checked>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Video player</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxTextCtrl" name="ID_TEXTCTRL12">
+                                    <value>C:\Program Files\VideoLAN\VLC\vlc.exe</value>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_BUTTON12">
+                                    <label>Browse...</label>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_LEFT|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>(Empty = default)</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX49">
+                            <style>wxCHK_2STATE</style>
+                            <label>Create backup to preview</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="NotificationsPanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>Notifications</label>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Pop up message</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX50">
+                            <style>wxCHK_2STATE</style>
+                            <label>Use sound</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxTextCtrl" name="ID_TEXTCTRL13">
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_BUTTON13">
+                                    <label>Browse...</label>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxStaticBoxSizer" name="wxID_ANY">
+                            <orient>wxVERTICAL</orient>
+                            <label>Pop out when</label>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_CHECKBOX51">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Log entry added</label>
+                                    <checked>0</checked>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_CHECKBOX52">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Chat session started</label>
+                                    <checked>0</checked>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_CHECKBOX53">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Chat message received</label>
+                                    <checked>0</checked>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_CHECKBOX54">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Download added</label>
+                                    <checked>0</checked>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_CHECKBOX55">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Download finished</label>
+                                    <checked>0</checked>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_CHECKBOX56">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>New PureKad version detected</label>
+                                    <checked>0</checked>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxGROW|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxCheckBox" name="ID_CHECKBOX57">
+                                    <style>wxCHK_2STATE</style>
+                                    <label>Urgent: out of diskspace, server connection lost</label>
+                                    <checked>0</checked>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="StatisticsPanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>Statistics</label>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Graphs</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Update delay: 3 seconds</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxSlider" name="ID_SLIDER3">
+                            <size>-1,25</size>
+                            <style>wxSL_HORIZONTAL|wxSUNKEN_BORDER</style>
+                            <value>3</value>
+                            <min>0</min>
+                            <max>100</max>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Time for average graph: 5 minutes</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxSlider" name="ID_SLIDER">
+                            <size>-1,25</size>
+                            <style>wxSL_HORIZONTAL|wxSUNKEN_BORDER</style>
+                            <value>5</value>
+                            <min>1</min>
+                            <max>100</max>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxStaticBoxSizer" name="wxID_ANY">
+                            <orient>wxHORIZONTAL</orient>
+                            <label>Colors</label>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxChoice" name="ID_CHOICE">
+                                    <content>
+                                        <item>Background</item>
+                                        <item>Grid</item>
+                                        <item>Download session average</item>
+                                        <item>Download average</item>
+                                        <item>Download current</item>
+                                        <item>Upload session average</item>
+                                        <item>Upload average</item>
+                                        <item>Upload current</item>
+                                        <item>Upload current (excluding overhead)</item>
+                                        <item>Upload friend slots</item>
+                                        <item>Active connections</item>
+                                        <item>Active uploads</item>
+                                        <item>Total uploads</item>
+                                        <item>Active downloads</item>
+                                        <item>System tray icon speed bar</item>
+                                    </content>
+                                    <selection>0</selection>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_BUTTON14">
+                                    <size>35,-1</size>
+                                    <bg>#000000</bg>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Connection statistics Y-axis scale:</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxTextCtrl" name="ID_TEXTCTRL14">
+                                    <size>60,-1</size>
+                                    <value>100</value>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Active connections ratio:</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxChoice" name="ID_CHOICE3">
+                                    <size>60,-1</size>
+                                    <content>
+                                        <item>1:1</item>
+                                        <item>1:2</item>
+                                        <item>1:3</item>
+                                        <item>1:4</item>
+                                        <item>1:5</item>
+                                        <item>1:10</item>
+                                        <item>1:20</item>
+                                    </content>
+                                    <selection>2</selection>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Statistics tree</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Update delay: 5 seconds</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxSlider" name="ID_SLIDER1">
+                            <size>-1,25</size>
+                            <style>wxSL_HORIZONTAL|wxSUNKEN_BORDER</style>
+                            <value>5</value>
+                            <min>0</min>
+                            <max>100</max>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="SecurityPanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>Security</label>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>IP Filter</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX58">
+                            <style>wxCHK_2STATE</style>
+                            <label>Filter servers too (rejects dynIP-servers)</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Filter level:</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>&lt;</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxTextCtrl" name="ID_TEXTCTRL15">
+                                    <size>50,-1</size>
+                                    <value>127</value>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_BUTTON15">
+                                    <label>Reload</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_BUTTON16">
+                                    <label>Edit...</label>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Update from URL: (filter.dat or PeerGuardian-format)</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxTOP</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxTextCtrl" name="ID_TEXTCTRL16">
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_BUTTON17">
+                                    <size>20,-1</size>
+                                    <label>\/</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_BUTTON18">
+                                    <label>Load</label>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Messages</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Filter messages containing: (Separator | )</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxTextCtrl" name="ID_TEXTCTRL17">
+                            <value>Your client has an infinite queue</value>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX59">
+                            <style>wxCHK_2STATE</style>
+                            <label>Accept from friends only</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX60">
+                            <style>wxCHK_2STATE</style>
+                            <label>Accept from valid clients only</label>
+                            <checked>1</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX61">
+                            <style>wxCHK_2STATE</style>
+                            <label>Advanced spamfilter</label>
+                            <checked>1</checked>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Comments</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Ignore comments containing: (Separator | )</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxTextCtrl" name="ID_TEXTCTRL18">
+                            <value>http://|www.</value>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Miscellaneous</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX62">
+                            <style>wxCHK_2STATE</style>
+                            <label>Use secure identification</label>
+                            <checked>1</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX63">
+                            <style>wxCHK_2STATE</style>
+                            <label>Run PureKad as an unprivileged user</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+    <object class="wxPanel" name="WebInterfacePanel">
+        <style>wxNO_BORDER</style>
+        <size>400,300</size>
+        <object class="wxStaticBoxSizer" name="wxID_ANY">
+            <orient>wxVERTICAL</orient>
+            <label>Web Interface</label>
+            <object class="sizeritem">
+                <flag>wxGROW|wxALL</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>General</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX64">
+                            <style>wxCHK_2STATE</style>
+                            <label>Enabled</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX65">
+                            <style>wxCHK_2STATE</style>
+                            <label>Gzip compression</label>
+                            <checked>1</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Port:</label>
+                                </object>
+                            </object>
+                            <object class="spacer">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <size>40,5</size>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxTextCtrl" name="ID_TEXTCTRL19">
+                                    <size>40,-1</size>
+                                    <value>4771</value>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Template:</label>
+                                </object>
+                            </object>
+                            <object class="spacer">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <size>16,5</size>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxTextCtrl" name="ID_TEXTCTRL20">
+                                    <value>eMule.tmpl</value>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxButton" name="ID_BUTTON19">
+                                    <size>25,-1</size>
+                                    <label>...</label>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_RIGHT|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                        <border>5</border>
+                        <object class="wxButton" name="ID_BUTTON20">
+                            <label>Reload</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Session timeout:</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxTextCtrl" name="ID_TEXTCTRL">
+                                    <size>35,-1</size>
+                                    <value>5</value>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Minutes</label>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxHORIZONTAL</orient>
+                    <label>Administrator</label>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                        <border>5</border>
+                        <object class="wxStaticText" name="wxID_STATIC">
+                            <label>Password:</label>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                        <border>5</border>
+                        <option>1</option>
+                        <object class="wxTextCtrl" name="ID_TEXTCTRL21">
+                            <style>wxTE_PASSWORD</style>
+                            <value>admin</value>
+                        </object>
+                    </object>
+                </object>
+            </object>
+            <object class="sizeritem">
+                <flag>wxGROW|wxLEFT|wxRIGHT|wxBOTTOM</flag>
+                <border>5</border>
+                <object class="wxStaticBoxSizer" name="wxID_ANY">
+                    <orient>wxVERTICAL</orient>
+                    <label>Guest</label>
+                    <object class="sizeritem">
+                        <flag>wxGROW|wxLEFT|wxRIGHT|wxTOP</flag>
+                        <border>5</border>
+                        <object class="wxCheckBox" name="ID_CHECKBOX66">
+                            <style>wxCHK_2STATE</style>
+                            <label>Enabled</label>
+                            <checked>0</checked>
+                        </object>
+                    </object>
+                    <object class="sizeritem">
+                        <flag>wxGROW</flag>
+                        <border>5</border>
+                        <object class="wxBoxSizer">
+                            <orient>wxHORIZONTAL</orient>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <object class="wxStaticText" name="wxID_STATIC">
+                                    <label>Password:</label>
+                                </object>
+                            </object>
+                            <object class="sizeritem">
+                                <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                                <border>5</border>
+                                <option>1</option>
+                                <object class="wxTextCtrl" name="ID_TEXTCTRL22">
+                                    <style>wxTE_PASSWORD</style>
+                                    <value>guest</value>
+                                </object>
+                            </object>
+                        </object>
+                    </object>
+                </object>
+            </object>
+        </object>
+    </object>
+</resource>
