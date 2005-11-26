@@ -8,5 +8,15 @@ package.buildoptions = { "`wx-config --cxxflags`" }
 package.linkoptions = { "`wx-config --libs`" }
 
 package.files = {
-matchfiles("*.h","*.cpp")
+"xApp.cpp",
+"xMainFrame/xKadPanel.cpp",
+"xMainFrame/xMainFrame.cpp",
+"xMainFrame/xSearchPanel.cpp",
+"xMainFrame/xServersPanel.cpp",
+"xMainFrame/xSharedFilesPanel.cpp",
+"xMainFrame/xTransfersPanel.cpp",
+"xMainFrame/xOptions/xOptionsDialog.cpp",
+"xCore/xSafeFile.cpp",
+"xCore/xServer.cpp",
+"xCore/xTag.cpp"
 }
