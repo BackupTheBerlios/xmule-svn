@@ -1,5 +1,4 @@
-In order to compile xMule, I used wxWidgets 2.6.2
-with the following options:
+In order to compile xMule, I used wxWidgets 2.6.2 with the following options:
 
 - Unicode ON (--enable-unicode)
 - STL usage ON (--enable-stl)
