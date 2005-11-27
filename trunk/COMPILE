@@ -6,6 +6,7 @@ In order to compile xMule, I used wxWidgets 2.6.2 with the following options:
 - Static library (--enable-static)
 - Debug ON (--enable-debug)
 
+
 Windows:
 --------
 Microsoft Visual Studio 2005. wxMSW. Solution file is provided.
