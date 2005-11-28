@@ -6,6 +6,10 @@
 #include "../xApp.h"                   // wxGetApp()
 #include "xTag.h"
 
+#ifdef __UNIX__
+#include <arpa/inet.h>                 // inet_addr()
+#endif
+
 xServer::xServer(const ServerMet_Struct* in_data)
 {
     port = in_data->port;
