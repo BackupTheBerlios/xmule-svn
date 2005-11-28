@@ -66,7 +66,8 @@ xTag::xTag(wxUint8 uName, const wxByte* pucHash)
     m_nBlobSize = 0;
 }
 
-xTag::xTag(wxUint8 uName, wxUint32 nSize, const wxByte* pucData){
+xTag::xTag(wxUint8 uName, wxUint32 nSize, const wxByte* pucData)
+{
     m_uType = TAGTYPE_BLOB;
     m_uName = uName;
     m_pszName = NULL;

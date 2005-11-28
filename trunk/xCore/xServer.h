@@ -8,7 +8,6 @@
 #include <wx/defs.h>                   // wxWidgets definitions
 #include <wx/string.h>                 // wxString
 
-
 class xTag;
 class xFileDataIO;
 
@@ -27,17 +26,17 @@ struct ServerMet_Struct
 
 
 // Server TCP flags
-#define SRV_TCPFLG_COMPRESSION   0x00000001
-#define SRV_TCPFLG_NEWTAGS       0x00000008
-#define SRV_TCPFLG_UNICODE       0x00000010
-#define SRV_TCPFLG_RELATEDSEARCH 0x00000040
+#define SRV_TCPFLG_COMPRESSION   0x01
+#define SRV_TCPFLG_NEWTAGS       0x08
+#define SRV_TCPFLG_UNICODE       0x10
+#define SRV_TCPFLG_RELATEDSEARCH 0x40
 
 // Server UDP flags
-#define SRV_UDPFLG_EXT_GETSOURCES  0x00000001
-#define SRV_UDPFLG_EXT_GETFILES    0x00000002
-#define SRV_UDPFLG_NEWTAGS         0x00000008
-#define SRV_UDPFLG_UNICODE         0x00000010
-#define SRV_UDPFLG_EXT_GETSOURCES2 0x00000020
+#define SRV_UDPFLG_EXT_GETSOURCES  0x01
+#define SRV_UDPFLG_EXT_GETFILES    0x02
+#define SRV_UDPFLG_NEWTAGS         0x08
+#define SRV_UDPFLG_UNICODE         0x10
+#define SRV_UDPFLG_EXT_GETSOURCES2 0x20
 
 class xServer
 {
