@@ -83,17 +83,17 @@ void xOptionsDialog::CreateControls()
     PrefsImageList->Add(wxIcon(statistics_xpm));
     PrefsImageList->Add(wxIcon(security_xpm));
     PrefsImageList->Add(wxIcon(webinterface_xpm));
-    wxListView* itemListView = new wxListView( itemDialog1, ListViewId, wxDefaultPosition, wxSize(120, -1), wxLC_SINGLE_SEL|wxLC_REPORT|wxRAISED_BORDER|wxLC_NO_HEADER);
-    MainListView=itemListView;
-    itemListView->AssignImageList(PrefsImageList, wxIMAGE_LIST_SMALL);
-    itemListView->InsertColumn(0, wxEmptyString, wxLIST_FORMAT_LEFT, itemListView->GetSize().GetWidth()-5);
+    MainListView = new wxListView( itemDialog1, ListViewId, wxDefaultPosition, wxSize(-1, -1), wxLC_SINGLE_SEL|wxLC_REPORT|wxRAISED_BORDER|wxLC_NO_HEADER);
+    MainListView->SetSizeHints(wxSize(120,-1));
+    MainListView->AssignImageList(PrefsImageList, wxIMAGE_LIST_SMALL);
+    MainListView->InsertColumn(0, wxEmptyString, wxLIST_FORMAT_LEFT, MainListView->GetSize().GetWidth()-5);
     for (unsigned int i=0; i < PrefsPages.size(); ++i)
     {
         xOptionsPage* CurPage=PrefsPages.at(i);
         CurPage->LoadResourcePanel(this);
-        itemListView->InsertItem(i, CurPage->GetListName(), CurPage->GetImageIndex());
+        MainListView->InsertItem(i, CurPage->GetListName(), CurPage->GetImageIndex());
     }
-    itemBoxSizer3->Add(itemListView, 0, wxGROW|wxALL, 5);
+    itemBoxSizer3->Add(MainListView, 0, wxGROW|wxALL, 5);
 
     wxBoxSizer* itemBoxSizer6 = new wxBoxSizer(wxHORIZONTAL);
     itemBoxSizer2->Add(itemBoxSizer6, 0, wxGROW|wxALL, 5);
