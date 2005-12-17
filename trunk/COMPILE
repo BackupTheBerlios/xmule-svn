@@ -16,4 +16,4 @@ Linux:
 --------
 Compiler: GCC 4.x. Older versions may work as well, but untested.
 Library: wxGTK.
-Notes: Used Premake-3.0-beta1 for creating the makefiles.  Makefiles are provided.
+Notes: Used Premake-3.0-beta2 for creating the makefiles.  Makefiles are provided.
