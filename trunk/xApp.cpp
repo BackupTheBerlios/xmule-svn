@@ -116,9 +116,8 @@ bool AddServerMetToList(const wxString& strFile)
     }
     ServersListCtrl->Thaw();
     servermet.Close();
-    wxString toShow(wxT("Servers ("));
-    toShow<<iAddCount;
-    toShow<<wxT(")");
+    wxString toShow;
+    toShow << wxT("Servers (") << iAddCount << wxT(")");
     theApp->GetMainFrame()->SetServersLabel(toShow);
     return true;
 }
