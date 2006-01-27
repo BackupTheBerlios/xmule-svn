@@ -35,6 +35,7 @@ public:
     virtual wxUint8 ReadUInt8();
     virtual wxUint16 ReadUInt16();
     virtual wxUint32 ReadUInt32();
+    virtual wxUint64 ReadUInt64();
 //  virtual void ReadUInt128(Kademlia::CUInt128 *pVal); // TODO: Kad
     virtual void ReadHash16(unsigned char* pVal);
     virtual wxString ReadString(bool bOptUTF8);
@@ -44,6 +45,7 @@ public:
     virtual void WriteUInt8(wxUint8 nVal);
     virtual void WriteUInt16(wxUint16 nVal);
     virtual void WriteUInt32(wxUint32 nVal);
+    virtual void WriteUInt64(wxUint64 nVal);
 //  virtual void WriteUInt128(const Kademlia::CUInt128 *pVal); // TODO: Kad
     virtual void WriteHash16(const unsigned char* pVal);
 //  virtual void WriteString(const CString& rstr, EUtf8Str eEncode = utf8strNone);
@@ -88,6 +90,10 @@ inline wxUint32 PeekUInt32(const void* p)
     return *((wxUint32*)p);
 }
 
+inline wxUint64 PeekUInt64(const void* p)
+{
+	return *((wxUint64*)p);
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 // Poke - helper functions for write-accessing memory without modifying the memory pointer
@@ -107,6 +113,10 @@ inline void PokeUInt32(void* p, wxUint32 nVal)
     *((wxUint32*)p) = nVal;
 }
 
+inline void PokeUInt64(void* p, wxUint64 nVal)
+{
+	*((wxUint64*)p) = nVal;
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 // Array

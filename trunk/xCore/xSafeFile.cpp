@@ -151,9 +151,16 @@ wxUint32 xFileDataIO::ReadUInt32()
     return nVal;
 }
 
+wxUint64 CFileDataIO::ReadUInt64()
+{
+	wxUint64 nVal;
+	Read(&nVal, sizeof(nVal));
+	return nVal;
+}
+
 /*void CFileDataIO::ReadUInt128(Kademlia::CUInt128 *pVal)
 {
-    Read(pVal->getDataPtr(), 16);
+    Read(pVal->GetDataPtr(), 16);
 }*/
 
 void xFileDataIO::ReadHash16(unsigned char* pVal)
@@ -266,9 +273,14 @@ void xFileDataIO::WriteUInt32(wxUint32 nVal)
     Write(&nVal, sizeof(nVal));
 }
 
+void CFileDataIO::WriteUInt64(wxUint64 nVal)
+{
+	Write(&nVal, sizeof(nVal));
+}
+
 /*void CFileDataIO::WriteUInt128(const Kademlia::CUInt128 *pVal)
 {
-    Write(pVal->getData(), 16);
+    Write(pVal->GetData(), 16);
 }*/
 
 void xFileDataIO::WriteHash16(const unsigned char* pVal)
@@ -278,7 +290,7 @@ void xFileDataIO::WriteHash16(const unsigned char* pVal)
 
 /*void CFileDataIO::WriteString(const CString& rstr, EUtf8Str eEncode)
 {
-#define WRITE_STR_LEN(n)    WritewxUint3216(n)
+#define	WRITE_STR_LEN(n) WriteUInt16((wxUint16)(n))
     if (eEncode == utf8strRaw)
     {
         CUnicodeToUTF8 utf8(rstr);
@@ -312,13 +324,13 @@ void xFileDataIO::WriteHash16(const unsigned char* pVal)
 void CFileDataIO::WriteString(const char* psz)
 {
     wxUint32 uLen = strlen(psz);
-    WritewxUint3216(uLen);
+    WriteUInt16((wxUint16)uLen);
     Write(psz, uLen);
 }
 
 void CFileDataIO::WriteLongString(const CString& rstr, EUtf8Str eEncode)
 {
-#define WRITE_STR_LEN(n)    WritewxUint3232(n)
+#define	WRITE_STR_LEN(n) WriteUInt32((wxUint32)n)
     if (eEncode == utf8strRaw)
     {
         CUnicodeToUTF8 utf8(rstr);
