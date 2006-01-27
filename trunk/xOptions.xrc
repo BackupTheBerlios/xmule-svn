@@ -17,7 +17,7 @@
                         <border>5</border>
                         <object class="wxTextCtrl" name="ID_NICK">
                             <size>200,-1</size>
-                            <value>Avi</value>
+                            <value>Avi (www.xmule.ws)</value>
                         </object>
                     </object>
                 </object>
