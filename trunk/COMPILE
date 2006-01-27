@@ -1,19 +1,11 @@
-In order to compile xMule, I used wxWidgets 2.6.2 with the following options:
-
-- Unicode ON (--enable-unicode)
-- STL usage ON (--enable-stl)
-- Monolithic library (--enable-monolithic)
-- Static library (--enable-static)
-- Debug ON (--enable-debug)
-
 Windows:
 --------
 Compiler: Microsoft Visual Studio 2005.
-Library: wxMSW.
+Library: wxMSW-2.6.2 (Unicode ON, STL usage ON, Static library).
 Notes: Solution file is provided.
 
 Linux:
 --------
 Compiler: GCC 4.x. Older versions may work as well, but untested.
-Library: wxGTK.
-Notes: Used Premake-3.0-beta2 for creating the makefiles.  Makefiles are provided.
+Library: wxGTK-2.6.2 (--enable-unicode --enable-stl --enable-monolithic --enable-static --enable-debug).
+Notes: Used Premake-3.0 for creating the makefiles.  Makefiles are provided.

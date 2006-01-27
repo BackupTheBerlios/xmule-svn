@@ -6,10 +6,10 @@ ifndef CONFIG
 endif
 
 ifeq ($(CONFIG),Debug)
-  BINDIR = ./bin
+  BINDIR = bin
   LIBDIR = .
   OBJDIR = obj/Debug
-  OUTDIR = ./bin
+  OUTDIR = bin
   CPPFLAGS = -MD
   CFLAGS += $(CPPFLAGS) -g `wx-config --cxxflags`
   CXXFLAGS = $(CFLAGS)
@@ -19,10 +19,10 @@ ifeq ($(CONFIG),Debug)
 endif
 
 ifeq ($(CONFIG),Release)
-  BINDIR = ./bin
+  BINDIR = bin
   LIBDIR = .
   OBJDIR = obj/Release
-  OUTDIR = ./bin
+  OUTDIR = bin
   CPPFLAGS = -MD
   CFLAGS += $(CPPFLAGS) -O2 `wx-config --cxxflags`
   CXXFLAGS = $(CFLAGS)
@@ -50,11 +50,12 @@ $(OUTDIR)/$(TARGET): $(OBJECTS) $(LDDEPS)
 	@echo Linking xMule
 	-@if [ ! -d $(BINDIR) ]; then mkdir -p $(BINDIR); fi
 	-@if [ ! -d $(LIBDIR) ]; then mkdir -p $(LIBDIR); fi
+	-@if [ ! -d $(OUTDIR) ]; then mkdir -p $(OUTDIR); fi
 	@$(CXX) -o $@ $(OBJECTS) $(LDFLAGS)
 
 clean:
 	@echo Cleaning xMule
-	-@rm -rf $(OUTDIR)/$(TARGET) $(OBJDIR)/*
+	-@rm -rf $(OUTDIR)/$(TARGET) $(OBJDIR)
 
 $(OBJDIR)/xApp.o: xApp.cpp
 	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi

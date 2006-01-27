@@ -13,13 +13,13 @@ export CONFIG
 
 all: xMule
 
-Makefile: ./premake.lua
+Makefile: premake.lua
 	@echo ==== Regenerating Makefiles ====
 	@premake --target gnu
 
 xMule:
 	@echo ==== Building xMule ====
-	@$(MAKE) --no-print-directory -C ./ -f xMule.make
+	@$(MAKE) --no-print-directory -C . -f xMule.make
 
 clean:
-	@$(MAKE) --no-print-directory -C ./ -f xMule.make clean
+	@$(MAKE) --no-print-directory -C . -f xMule.make clean
