@@ -17,7 +17,7 @@ xServer::xServer(const ServerMet_Struct* in_data)
     wxStrcpy(ipfull, ipstr(ip));
     files = 0;
     users = 0;
-    preferences = 0;
+    m_uPreference = 0;
     ping = 0;
     failedcount = 0;
     lastpinged = 0;
@@ -45,7 +45,7 @@ xServer::xServer(wxUint16 in_port, const wxChar* i_addr)
     wxStrcpy(ipfull, ipstr(ip));
     files = 0;
     users = 0;
-    preferences = 0;
+    m_uPreference = 0;
     ping = 0;
     failedcount = 0;
     lastpinged = 0;
@@ -70,7 +70,7 @@ xServer::xServer(const xServer* pOld)
     wxStrcpy(ipfull, pOld->ipfull);
     files = pOld->files;
     users = pOld->users;
-    preferences = pOld->preferences;
+    m_uPreference = pOld->m_uPreference;
     ping = pOld->ping;
     failedcount = pOld->failedcount;
     lastpinged = pOld->lastpinged;
@@ -126,7 +126,7 @@ bool xServer::AddTagFromFile(xFileDataIO* servermet)
     case ST_PREFERENCE:
         wxASSERT( tag->IsInt() );
         if (tag->IsInt())
-            preferences = tag->GetInt();
+            m_uPreference = tag->GetInt();
         break;
     case ST_DYNIP:
         wxASSERT( tag->IsStr() );

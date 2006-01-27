@@ -26,17 +26,20 @@ struct ServerMet_Struct
 
 
 // Server TCP flags
-#define SRV_TCPFLG_COMPRESSION   0x01
-#define SRV_TCPFLG_NEWTAGS       0x08
-#define SRV_TCPFLG_UNICODE       0x10
-#define SRV_TCPFLG_RELATEDSEARCH 0x40
+#define SRV_TCPFLG_COMPRESSION    0x00000001
+#define SRV_TCPFLG_NEWTAGS        0x00000008
+#define SRV_TCPFLG_UNICODE        0x00000010
+#define SRV_TCPFLG_RELATEDSEARCH  0x00000040
+#define SRV_TCPFLG_TYPETAGINTEGER 0x00000080
+#define SRV_TCPFLG_LARGEFILES     0x00000100
 
 // Server UDP flags
-#define SRV_UDPFLG_EXT_GETSOURCES  0x01
-#define SRV_UDPFLG_EXT_GETFILES    0x02
-#define SRV_UDPFLG_NEWTAGS         0x08
-#define SRV_UDPFLG_UNICODE         0x10
-#define SRV_UDPFLG_EXT_GETSOURCES2 0x20
+#define SRV_UDPFLG_EXT_GETSOURCES  0x00000001
+#define SRV_UDPFLG_EXT_GETFILES    0x00000002
+#define SRV_UDPFLG_NEWTAGS         0x00000008
+#define SRV_UDPFLG_UNICODE         0x00000010
+#define SRV_UDPFLG_EXT_GETSOURCES2 0x00000020
+#define SRV_UDPFLG_LARGEFILES      0x00000100
 
 class xServer
 {
@@ -71,8 +74,8 @@ public:
     wxUint32 GetUsers() const { return users; }
     void SetUserCount(wxUint32 in_users) { users = in_users; }
 
-    wxUint32 GetPreferences() const { return preferences; }
-    void SetPreference(wxUint32 in_preferences) { preferences = in_preferences; }
+    wxUint32 GetPreferences() const { return m_uPreference; }
+    void SetPreference(wxUint32 in_preferences) { m_uPreference = in_preferences; }
 
     wxUint32 GetPing() const {return ping;}
     void SetPing(wxUint32 in_ping) { ping = in_ping; }
@@ -123,6 +126,8 @@ public:
 
     bool GetUnicodeSupport() const { return (GetTCPFlags() & SRV_TCPFLG_UNICODE)!=0; }
     bool GetRelatedSearchSupport() const { return (GetTCPFlags() & SRV_TCPFLG_RELATEDSEARCH)!=0; }
+    bool SupportsLargeFilesTCP() const { return (GetTCPFlags() & SRV_TCPFLG_LARGEFILES)!=0; }
+    bool SupportsLargeFilesUDP() const { return (GetUDPFlags() & SRV_UDPFLG_LARGEFILES)!=0; }
 
     bool IsEqual(const xServer* pServer) const;
 
@@ -137,7 +142,7 @@ private:
     wxUint32 maxusers;
     wxUint32 softfiles;
     wxUint32 hardfiles;
-    wxUint32 preferences;
+    wxUint32 m_uPreference;
     wxUint32 ping;
     wxString m_strDescription;
     wxString m_strName;
