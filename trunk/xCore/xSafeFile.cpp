@@ -151,7 +151,7 @@ wxUint32 xFileDataIO::ReadUInt32()
     return nVal;
 }
 
-wxUint64 CFileDataIO::ReadUInt64()
+wxUint64 xFileDataIO::ReadUInt64()
 {
 	wxUint64 nVal;
 	Read(&nVal, sizeof(nVal));
@@ -273,7 +273,7 @@ void xFileDataIO::WriteUInt32(wxUint32 nVal)
     Write(&nVal, sizeof(nVal));
 }
 
-void CFileDataIO::WriteUInt64(wxUint64 nVal)
+void xFileDataIO::WriteUInt64(wxUint64 nVal)
 {
 	Write(&nVal, sizeof(nVal));
 }

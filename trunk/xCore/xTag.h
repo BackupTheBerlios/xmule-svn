@@ -72,7 +72,7 @@ public:
     bool IsInt64(bool bOrInt32 = true) const { return m_uType == TAGTYPE_UINT64 || (bOrInt32 && IsInt()); }
 	
     wxUint32 GetInt() const { wxASSERT(IsInt()); return (wxUint32)m_uVal; }
-	wxUint64 GetInt64() const { ASSERT(IsInt64(true)); return m_uVal; }
+	wxUint64 GetInt64() const { wxASSERT(IsInt64(true)); return m_uVal; }
     const wxString& GetStr() const { wxASSERT(IsStr()); return* m_pstrVal; }
     float GetFloat() const { wxASSERT(IsFloat()); return m_fVal; }
     const wxByte* GetHash() const { wxASSERT(IsHash()); return m_pData; }
