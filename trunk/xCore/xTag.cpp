@@ -2,21 +2,35 @@
 #include "xTag.h"
 #include "xSafeFile.h"
 
-xTag::xTag(const char* pszName, wxUint32 uVal)
+xTag::xTag(const char* pszName, wxUint64 uVal, bool bInt64)
 {
-    m_uType = TAGTYPE_UINT32;
+    wxASSERT( uVal <= 0xFFFFFFFF || bInt64 );
+    if (bInt64)
+    {
+        m_uType = TAGTYPE_UINT64;
+    }
+    else
+    {
+        m_uType = TAGTYPE_UINT32;
+    }
+    m_uVal = uVal;
     m_uName = 0;
     m_pszName = nstrdup(pszName);
-    m_uVal = uVal;
     m_nBlobSize = 0;
 }
 
-xTag::xTag(wxUint8 uName, wxUint32 uVal)
+xTag::xTag(wxUint8 uName, wxUint64 uVal, bool bInt64)
 {
-    m_uType = TAGTYPE_UINT32;
+    wxASSERT( uVal <= 0xFFFFFFFF || bInt64 );
+    if (bInt64){
+        m_uType = TAGTYPE_UINT64;
+    }
+    else{
+        m_uType = TAGTYPE_UINT32;
+    }
+    m_uVal = uVal;
     m_uName = uName;
     m_pszName = NULL;
-    m_uVal = uVal;
     m_nBlobSize = 0;
 }
 
@@ -86,6 +100,8 @@ xTag::xTag(const xTag& rTag)
         m_pstrVal = new wxString(rTag.GetStr());
     else if (rTag.IsInt())
         m_uVal = rTag.GetInt();
+    else if (rTag.IsInt64(false))
+        m_uVal = rTag.GetInt64();
     else if (rTag.IsFloat())
         m_fVal = rTag.GetFloat();
     else if (rTag.IsHash()){
@@ -149,6 +165,10 @@ xTag::xTag(xFileDataIO* data, bool bOptUTF8)
     else if (m_uType == TAGTYPE_UINT32)
     {
         m_uVal = data->ReadUInt32();
+    }
+    else if (m_uType == TAGTYPE_UINT64)
+    {
+        m_uVal = data->ReadUInt64();
     }
     else if (m_uType == TAGTYPE_UINT16)
     {
@@ -409,6 +429,16 @@ void xTag::SetInt(wxUint32 uVal)
         m_uVal = uVal;
 }
 
+void xTag::SetInt64(wxUint64 uVal)
+{
+    wxASSERT( IsInt64(true) );
+    if (IsInt64(true))
+    {
+        m_uVal = uVal;
+        m_uType = TAGTYPE_UINT64;
+    }
+}
+
 void xTag::SetStr(const wxChar* pszVal)
 {
     wxASSERT( IsStr() );
@@ -431,7 +461,7 @@ wxString xTag::GetFullInfo() const
     }
     else
     {
-        strTag.Printf(wxT("0x%02X"), m_uName);
+        strTag.Printf(wxT("Tag0x%02X"), m_uName);
     }
     strTag += wxT("=");
     if (m_uType == TAGTYPE_STRING)
@@ -446,7 +476,11 @@ wxString xTag::GetFullInfo() const
     }
     else if (m_uType == TAGTYPE_UINT32)
     {
-        strTag.Append(wxString::Format(wxT("(Int32)%u"), m_uVal));
+        strTag.Append(wxString::Format(wxT("(Int32)%u"), (wxUint32)m_uVal));
+    }
+    else if (m_uType == TAGTYPE_UINT64)
+    {
+        strTag.Append(wxString::Format(wxT("(Int64)%I64u"), m_uVal));
     }
     else if (m_uType == TAGTYPE_UINT16)
     {

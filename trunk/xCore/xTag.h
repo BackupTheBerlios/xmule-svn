@@ -15,6 +15,7 @@ class xFileDataIO;
 #define TAGTYPE_UINT16          0x08
 #define TAGTYPE_UINT8           0x09
 #define TAGTYPE_BSOB            0x0A
+#define	TAGTYPE_UINT64          0x0B
 
 #define TAGTYPE_STR1			0x11
 #define TAGTYPE_STR2			0x12
@@ -42,8 +43,8 @@ class xFileDataIO;
 class xTag
 {
 public:
-    xTag(const char* pszName, wxUint32 uVal);
-    xTag(wxUint8 uName, wxUint32 uVal);
+    xTag(const char* pszName, wxUint64 uVal, bool bInt64 = false);
+    xTag(wxUint8 uName, wxUint64 uVal, bool bInt64 = false);
 
     xTag(const char* pszName, const wxChar* pszVal);
     xTag(wxUint8 uName, const wxChar* pszVal);
@@ -68,8 +69,10 @@ public:
     bool IsFloat() const { return m_uType == TAGTYPE_FLOAT32; }
     bool IsHash() const { return m_uType == TAGTYPE_HASH; }
     bool IsBlob() const { return m_uType == TAGTYPE_BLOB; }
-
-    wxUint32 GetInt() const { wxASSERT(IsInt()); return m_uVal; }
+    bool IsInt64(bool bOrInt32 = true) const { return m_uType == TAGTYPE_UINT64 || (bOrInt32 && IsInt()); }
+	
+    wxUint32 GetInt() const { wxASSERT(IsInt()); return (wxUint32)m_uVal; }
+	wxUint64 GetInt64() const { ASSERT(IsInt64(true)); return m_uVal; }
     const wxString& GetStr() const { wxASSERT(IsStr()); return* m_pstrVal; }
     float GetFloat() const { wxASSERT(IsFloat()); return m_fVal; }
     const wxByte* GetHash() const { wxASSERT(IsHash()); return m_pData; }
@@ -77,6 +80,7 @@ public:
     const wxByte* GetBlob() const { wxASSERT(IsBlob()); return m_pData; }
 
     void SetInt(wxUint32 uVal);
+    void SetInt64(wxUint64 uVal);
     void SetStr(const wxChar* pszVal);
 
     xTag* CloneTag() { return new xTag(*this); }
@@ -94,7 +98,7 @@ protected:
     union
     {
         wxString* m_pstrVal;
-        wxUint32 m_uVal;
+        wxUint64 m_uVal;
         float m_fVal;
         wxByte* m_pData;
     };
