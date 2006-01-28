@@ -36,7 +36,7 @@ public:
     virtual wxUint16 ReadUInt16();
     virtual wxUint32 ReadUInt32();
     virtual wxUint64 ReadUInt64();
-//  virtual void ReadUInt128(Kademlia::CUInt128 *pVal); // TODO: Kad
+//  virtual void ReadUInt128(Kademlia::CUInt128 *pVal); // TODO:KAD
     virtual void ReadHash16(unsigned char* pVal);
     virtual wxString ReadString(bool bOptUTF8);
     virtual wxString ReadString(bool bOptUTF8, wxUint32 uRawSize);
@@ -46,7 +46,7 @@ public:
     virtual void WriteUInt16(wxUint16 nVal);
     virtual void WriteUInt32(wxUint32 nVal);
     virtual void WriteUInt64(wxUint64 nVal);
-//  virtual void WriteUInt128(const Kademlia::CUInt128 *pVal); // TODO: Kad
+//  virtual void WriteUInt128(const Kademlia::CUInt128 *pVal); // TODO:KAD
     virtual void WriteHash16(const unsigned char* pVal);
 //  virtual void WriteString(const CString& rstr, EUtf8Str eEncode = utf8strNone);
 //  virtual void WriteString(LPCSTR psz);

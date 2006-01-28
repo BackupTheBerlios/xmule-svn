@@ -1,6 +1,9 @@
 #ifndef _XUTILS_H_
 #define _XUTILS_H_
 
+#include <wx/defs.h>                   // wxWidgets definitions
+#include <wx/string.h>                 // wxString
+
 // Takes a C-style string and makes a copy of it. Returns a pointer to the new string.
 inline char* nstrdup(const char* todup)
 {
@@ -12,8 +15,23 @@ inline char* nstrdup(const char* todup)
 inline wxString ipstr(wxUint32 nIP)
 {
     const wxByte* pucIP = (wxByte*)&nIP;
-	wxString strIP = wxString::Format(wxT("%u.%u.%u.%u"), pucIP[0], pucIP[1], pucIP[2], pucIP[3]);
-	return strIP;
+    wxString strIP = wxString::Format(wxT("%u.%u.%u.%u"), pucIP[0], pucIP[1], pucIP[2], pucIP[3]);
+    return strIP;
+}
+
+// md4clr -- replacement for memset(hash,0,16)
+inline void md4clr(const void* hash)
+{
+    ((wxUint32*)hash)[0] = ((wxUint32*)hash)[1] = ((wxUint32*)hash)[2] = ((wxUint32*)hash)[3] = 0;
+}
+
+// md4cpy -- replacement for memcpy(dst,src,16)
+inline void md4cpy(void* dst, const void* src)
+{
+    ((wxUint32*)dst)[0] = ((wxUint32*)src)[0];
+    ((wxUint32*)dst)[1] = ((wxUint32*)src)[1];
+    ((wxUint32*)dst)[2] = ((wxUint32*)src)[2];
+    ((wxUint32*)dst)[3] = ((wxUint32*)src)[3];
 }
 
 inline int CmpED2KTagName(const char* pszTagName1, const char* pszTagName2)

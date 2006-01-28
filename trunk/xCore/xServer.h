@@ -13,15 +13,6 @@
 class xTag;
 class xFileDataIO;
 
-#pragma pack(1)
-struct ServerMet_Struct
-{
-    wxUint32 ip;
-    wxUint16 port;
-    wxUint32 tagcount;
-};
-#pragma pack()
-
 #define SRV_PR_LOW    2
 #define SRV_PR_NORMAL 0
 #define SRV_PR_HIGH   1
@@ -142,23 +133,5 @@ private:
     wxUint32 m_uUDPFlags;
     wxUint32 m_uLowIDUsers;
 };
-
-// server.met
-#define ST_SERVERNAME			0x01	// <string>
-#define ST_DESCRIPTION			0x0B	// <string>
-#define ST_PING					0x0C	// <uint32>
-#define ST_FAIL					0x0D	// <uint32>
-#define ST_PREFERENCE			0x0E	// <uint32>
-#define	ST_PORT					0x0F	// <uint32>
-#define	ST_IP					0x10	// <uint32>
-#define	ST_DYNIP				0x85	// <string>
-#define ST_MAXUSERS				0x87	// <uint32>
-#define ST_SOFTFILES			0x88	// <uint32>
-#define ST_HARDFILES			0x89	// <uint32>
-#define ST_LASTPING				0x90	// <uint32>
-#define	ST_VERSION				0x91	// <string>|<uint32>
-#define	ST_UDPFLAGS				0x92	// <uint32>
-#define	ST_AUXPORTSLIST			0x93	// <string>
-#define	ST_LOWIDUSERS			0x94	// <uint32>
 
 #endif // _XSERVER_H_
