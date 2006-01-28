@@ -5,6 +5,8 @@
 #ifndef _XSERVER_H_
 #define _XSERVER_H_
 
+#include "xOpCodes.h"                  // xServer opcodes
+
 #include <wx/defs.h>                   // wxWidgets definitions
 #include <wx/string.h>                 // wxString
 
@@ -23,23 +25,6 @@ struct ServerMet_Struct
 #define SRV_PR_LOW    2
 #define SRV_PR_NORMAL 0
 #define SRV_PR_HIGH   1
-
-
-// Server TCP flags
-#define SRV_TCPFLG_COMPRESSION    0x00000001
-#define SRV_TCPFLG_NEWTAGS        0x00000008
-#define SRV_TCPFLG_UNICODE        0x00000010
-#define SRV_TCPFLG_RELATEDSEARCH  0x00000040
-#define SRV_TCPFLG_TYPETAGINTEGER 0x00000080
-#define SRV_TCPFLG_LARGEFILES     0x00000100
-
-// Server UDP flags
-#define SRV_UDPFLG_EXT_GETSOURCES  0x00000001
-#define SRV_UDPFLG_EXT_GETFILES    0x00000002
-#define SRV_UDPFLG_NEWTAGS         0x00000008
-#define SRV_UDPFLG_UNICODE         0x00000010
-#define SRV_UDPFLG_EXT_GETSOURCES2 0x00000020
-#define SRV_UDPFLG_LARGEFILES      0x00000100
 
 class xServer
 {
@@ -158,15 +143,6 @@ private:
     wxUint32 m_uLowIDUsers;
 };
 
-// TODO: MOVE AWAY FROM HERE
-inline wxString ipstr(wxUint32 nIP)
-{
-	// Following gives the same string as 'inet_ntoa(*(in_addr*)&nIP)' but is not restricted to ASCII strings
-	const wxByte* pucIP = (wxByte*)&nIP;
-	wxString strIP = wxString::Format(wxT("%u.%u.%u.%u"), pucIP[0], pucIP[1], pucIP[2], pucIP[3]);
-	return strIP;
-}
-
 // server.met
 #define ST_SERVERNAME			0x01	// <string>
 #define ST_DESCRIPTION			0x0B	// <string>
@@ -184,10 +160,5 @@ inline wxString ipstr(wxUint32 nIP)
 #define	ST_UDPFLAGS				0x92	// <uint32>
 #define	ST_AUXPORTSLIST			0x93	// <string>
 #define	ST_LOWIDUSERS			0x94	// <uint32>
-
-inline int CmpED2KTagName(const char* pszTagName1, const char* pszTagName2)
-{
-    return wxString(pszTagName1, wxConvLibc).Cmp(wxString(pszTagName2, wxConvLibc));
-}
 
 #endif // _XSERVER_H_

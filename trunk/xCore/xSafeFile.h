@@ -68,8 +68,6 @@ public:
     virtual bool Seek(wxFileOffset lOff, wxSeekMode mode);
     virtual wxFileOffset GetPosition() const;
     virtual wxFileOffset GetLength() const;
-
-//    int printf(const wxChar* pszFmt, ...);
 };
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -142,8 +140,5 @@ public:
 protected:
     T* m_aT;
 };
-
-int utf8towc(const char* pcUtf8, wxUint32 uUtf8Size, wxChar* pwc, wxUint32 uWideCharSize);
-int ByteStreamToWideChar(const char* pcUtf8, wxUint32 uUtf8Size, wxChar* pwc, wxUint32 uWideCharSize);
 
 #endif // _XSAFEFILE_H_

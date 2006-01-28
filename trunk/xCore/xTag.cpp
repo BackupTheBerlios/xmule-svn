@@ -1,6 +1,7 @@
 #include "../xApp.h"                   // wxGetApp()
 #include "xTag.h"
 #include "xSafeFile.h"
+#include "xUtils.h"                    // nstrup()
 
 xTag::xTag(const char* pszName, wxUint64 uVal, bool bInt64)
 {

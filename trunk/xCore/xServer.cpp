@@ -5,6 +5,7 @@
 #include "xServer.h"                   // xServer
 #include "../xApp.h"                   // wxGetApp()
 #include "xTag.h"
+#include "xUtils.h"                    // ipstr()
 
 #ifdef __UNIX__
 #include <arpa/inet.h>                 // inet_addr()
