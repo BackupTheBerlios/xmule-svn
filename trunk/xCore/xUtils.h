@@ -34,6 +34,16 @@ inline void md4cpy(void* dst, const void* src)
     ((wxUint32*)dst)[3] = ((wxUint32*)src)[3];
 }
 
+inline wxString GetFileTypeByName(const wxString& notUsed)
+{
+    return wxString(wxY("GetFileTypeByName() TODO"));
+}
+
+inline wxString GetFileTypeDisplayStrFromED2KFileType(const wxString& notUsed)
+{
+    return wxString(wxY("GetFileTypeDisplayStrFromED2KFileType() TODO"));
+}
+
 inline int CmpED2KTagName(const char* pszTagName1, const char* pszTagName2)
 {
     return wxString(pszTagName1, wxConvLibc).Cmp(wxString(pszTagName2, wxConvLibc));

@@ -151,7 +151,7 @@ void xAbstractFile::SetFileType(const wxChar* pszFileType)
 wxString xAbstractFile::GetFileTypeDisplayStr()const
 {
     wxString strFileTypeDisplayStr(GetFileTypeDisplayStrFromED2KFileType(GetFileType()));
-    if (strFileTypeDisplayStr.IsEmpty())
+    if (strFileTypeDisplayStr.empty())
     {
         strFileTypeDisplayStr = GetFileType();
     }
