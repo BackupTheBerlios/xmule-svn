@@ -29,22 +29,22 @@
 // server.met
 ///////////////////////////////////////////
 
-#define ST_SERVERNAME			0x01	// <string>
-#define ST_DESCRIPTION			0x0B	// <string>
-#define ST_PING					0x0C	// <uint32>
-#define ST_FAIL					0x0D	// <uint32>
-#define ST_PREFERENCE			0x0E	// <uint32>
-#define	ST_PORT					0x0F	// <uint32>
-#define	ST_IP					0x10	// <uint32>
-#define	ST_DYNIP				0x85	// <string>
-#define ST_MAXUSERS				0x87	// <uint32>
-#define ST_SOFTFILES			0x88	// <uint32>
-#define ST_HARDFILES			0x89	// <uint32>
-#define ST_LASTPING				0x90	// <uint32>
-#define	ST_VERSION				0x91	// <string>|<uint32>
-#define	ST_UDPFLAGS				0x92	// <uint32>
-#define	ST_AUXPORTSLIST			0x93	// <string>
-#define	ST_LOWIDUSERS			0x94	// <uint32>
+#define ST_SERVERNAME           0x01    // <string>
+#define ST_DESCRIPTION          0x0B    // <string>
+#define ST_PING                 0x0C    // <uint32>
+#define ST_FAIL                 0x0D    // <uint32>
+#define ST_PREFERENCE           0x0E    // <uint32>
+#define ST_PORT                 0x0F    // <uint32>
+#define ST_IP                   0x10    // <uint32>
+#define ST_DYNIP                0x85    // <string>
+#define ST_MAXUSERS             0x87    // <uint32>
+#define ST_SOFTFILES            0x88    // <uint32>
+#define ST_HARDFILES            0x89    // <uint32>
+#define ST_LASTPING             0x90    // <uint32>
+#define ST_VERSION              0x91    // <string>|<uint32>
+#define ST_UDPFLAGS             0x92    // <uint32>
+#define ST_AUXPORTSLIST         0x93    // <string>
+#define ST_LOWIDUSERS           0x94    // <uint32>
 
 #pragma pack(1)
 struct ServerMet_Struct
@@ -97,16 +97,16 @@ struct ServerMet_Struct
 #define TAGTYPE_STR21           0x25
 #define TAGTYPE_STR22           0x26
 
-#define	MAX_EMULE_FILE_SIZE	0x4000000000ui64 // = 2^38 = 256GB
-#define OLD_MAX_EMULE_FILE_SIZE	4290048000ui64	// (4294967295/PARTSIZE)*PARTSIZE = ~4GB
+#define MAX_EMULE_FILE_SIZE 0x4000000000ui64 // = 2^38 = 256GB
+#define OLD_MAX_EMULE_FILE_SIZE 4290048000ui64  // (4294967295/PARTSIZE)*PARTSIZE = ~4GB
 
-#define	ED2KFTSTR_AUDIO			"Audio"	// value for eD2K tag FT_FILETYPE
-#define	ED2KFTSTR_VIDEO			"Video"	// value for eD2K tag FT_FILETYPE
-#define	ED2KFTSTR_IMAGE			"Image"	// value for eD2K tag FT_FILETYPE
-#define	ED2KFTSTR_DOCUMENT		"Doc"	// value for eD2K tag FT_FILETYPE
-#define	ED2KFTSTR_PROGRAM		"Pro"	// value for eD2K tag FT_FILETYPE
-#define	ED2KFTSTR_ARCHIVE		"Arc"	// eMule internal use only
-#define	ED2KFTSTR_CDIMAGE		"Iso"	// eMule internal use only
-#define ED2KFTSTR_EMULECOLLECTION	"EmuleCollection" // Value for eD2K tag FT_FILETYPE
+#define ED2KFTSTR_AUDIO         "Audio" // value for eD2K tag FT_FILETYPE
+#define ED2KFTSTR_VIDEO         "Video" // value for eD2K tag FT_FILETYPE
+#define ED2KFTSTR_IMAGE         "Image" // value for eD2K tag FT_FILETYPE
+#define ED2KFTSTR_DOCUMENT      "Doc"   // value for eD2K tag FT_FILETYPE
+#define ED2KFTSTR_PROGRAM       "Pro"   // value for eD2K tag FT_FILETYPE
+#define ED2KFTSTR_ARCHIVE       "Arc"   // eMule internal use only
+#define ED2KFTSTR_CDIMAGE       "Iso"   // eMule internal use only
+#define ED2KFTSTR_EMULECOLLECTION "EmuleCollection" // Value for eD2K tag FT_FILETYPE
 
 #endif // _XOPCODES_H_
