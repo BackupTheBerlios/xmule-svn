@@ -19,6 +19,11 @@ inline wxString ipstr(wxUint32 nIP)
     return strIP;
 }
 
+
+/////////////////////////////////////
+// MD4 Helper Functions
+/////////////////////////////////////
+
 // md4clr -- replacement for memset(hash,0,16)
 inline void md4clr(const void* hash)
 {
@@ -34,6 +39,18 @@ inline void md4cpy(void* dst, const void* src)
     ((wxUint32*)dst)[3] = ((wxUint32*)src)[3];
 }
 
+inline bool isnulmd4(const void* hash)
+{
+    return  (((wxUint32*)hash)[0] == 0 &&
+             ((wxUint32*)hash)[1] == 0 &&
+             ((wxUint32*)hash)[2] == 0 &&
+             ((wxUint32*)hash)[3] == 0);
+}
+
+/////////////////////////////////////
+// File Types - TODO
+/////////////////////////////////////
+
 inline wxString GetFileTypeByName(const wxString& notUsed)
 {
     return wxString(wxY("GetFileTypeByName() TODO"));
@@ -43,6 +60,10 @@ inline wxString GetFileTypeDisplayStrFromED2KFileType(const wxString& notUsed)
 {
     return wxString(wxY("GetFileTypeDisplayStrFromED2KFileType() TODO"));
 }
+
+/////////////////////////////////////
+// String convertion/comparison
+/////////////////////////////////////
 
 inline int CmpED2KTagName(const char* pszTagName1, const char* pszTagName2)
 {
