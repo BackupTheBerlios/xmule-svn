@@ -23,10 +23,12 @@ xTag::xTag(const char* pszName, wxUint64 uVal, bool bInt64)
 xTag::xTag(wxUint8 uName, wxUint64 uVal, bool bInt64)
 {
     wxASSERT( uVal <= 0xFFFFFFFF || bInt64 );
-    if (bInt64){
+    if (bInt64)
+    {
         m_uType = TAGTYPE_UINT64;
     }
-    else{
+    else
+    {
         m_uType = TAGTYPE_UINT32;
     }
     m_uVal = uVal;
