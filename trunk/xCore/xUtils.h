@@ -53,12 +53,12 @@ inline bool isnulmd4(const void* hash)
 
 inline wxString GetFileTypeByName(const wxString& notUsed)
 {
-    return wxString(wxY("GetFileTypeByName() TODO"));
+    return wxString(wxT("GetFileTypeByName() TODO"));
 }
 
 inline wxString GetFileTypeDisplayStrFromED2KFileType(const wxString& notUsed)
 {
-    return wxString(wxY("GetFileTypeDisplayStrFromED2KFileType() TODO"));
+    return wxString(wxT("GetFileTypeDisplayStrFromED2KFileType() TODO"));
 }
 
 /////////////////////////////////////
