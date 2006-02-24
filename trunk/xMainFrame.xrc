@@ -17,7 +17,7 @@
                         </object>
                     </object>
                     <object class="sizeritem">
-                        <flag>wxALIGN_CENTER_VERTICAL|wxALL|wxADJUST_MINSIZE</flag>
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
                         <border>5</border>
                         <option>1</option>
                         <object class="wxStaticText" name="ST_CONTACTS">
@@ -103,7 +103,7 @@
                                                 <object class="wxBoxSizer">
                                                     <orient>wxVERTICAL</orient>
                                                     <object class="sizeritem">
-                                                        <flag>wxGROW|wxADJUST_MINSIZE</flag>
+                                                        <flag>wxGROW</flag>
                                                         <border>5</border>
                                                         <object class="wxStaticText" name="wxID_STATIC">
                                                             <label>IP or Address:</label>
@@ -123,7 +123,7 @@
                                                 <object class="wxBoxSizer">
                                                     <orient>wxVERTICAL</orient>
                                                     <object class="sizeritem">
-                                                        <flag>wxGROW|wxLEFT|wxADJUST_MINSIZE</flag>
+                                                        <flag>wxGROW|wxLEFT</flag>
                                                         <border>5</border>
                                                         <object class="wxStaticText" name="wxID_STATIC">
                                                             <label>Port:</label>
@@ -206,7 +206,7 @@
                         </object>
                     </object>
                     <object class="sizeritem">
-                        <flag>wxALIGN_CENTER_VERTICAL|wxALL|wxADJUST_MINSIZE</flag>
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
                         <border>5</border>
                         <option>1</option>
                         <object class="wxStaticText" name="ST_SEARCHES">
@@ -240,7 +240,7 @@
                         <object class="wxBoxSizer">
                             <orient>wxVERTICAL</orient>
                             <object class="sizeritem">
-                                <flag>wxALIGN_LEFT|wxLEFT|wxRIGHT|wxTOP|wxADJUST_MINSIZE</flag>
+                                <flag>wxALIGN_LEFT|wxLEFT|wxRIGHT|wxTOP</flag>
                                 <border>5</border>
                                 <object class="wxStaticText" name="wxID_STATIC">
                                     <label>Name</label>
@@ -289,7 +289,7 @@
                                         <object class="wxBoxSizer">
                                             <orient>wxVERTICAL</orient>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxLEFT|wxRIGHT|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxLEFT|wxRIGHT</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>Type</label>
@@ -310,7 +310,7 @@
                                         <object class="wxBoxSizer">
                                             <orient>wxVERTICAL</orient>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxRIGHT|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxRIGHT</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>Method</label>
@@ -391,7 +391,7 @@
                         </object>
                     </object>
                     <object class="sizeritem">
-                        <flag>wxALIGN_CENTER_VERTICAL|wxALL|wxADJUST_MINSIZE</flag>
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
                         <border>5</border>
                         <object class="wxStaticText" name="wxID_STATIC">
                             <label>Search Results</label>
@@ -450,7 +450,7 @@
                         </object>
                     </object>
                     <object class="sizeritem">
-                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP|wxADJUST_MINSIZE</flag>
+                        <flag>wxALIGN_CENTER_VERTICAL|wxLEFT|wxRIGHT|wxTOP</flag>
                         <border>5</border>
                         <object class="wxStaticText" name="ST_SHAREDFILES">
                             <label>Shared Files (0)</label>
@@ -490,7 +490,7 @@
                                         <object class="wxBoxSizer">
                                             <orient>wxVERTICAL</orient>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <font>
@@ -505,21 +505,21 @@
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>Requests:</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>Accepted Uploads:</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>Transferred:</label>
@@ -538,21 +538,21 @@
                                                 <size>5,10d</size>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>-</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>-</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>-</label>
@@ -572,21 +572,21 @@
                                                 <size>5,10d</size>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="ST_SESREQUESTS">
                                                     <label>?</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="ST_SESACCEPTED">
                                                     <label>?</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="ST_SESTRANSFERRED">
                                                     <label>?</label>
@@ -600,7 +600,7 @@
                                         <object class="wxBoxSizer">
                                             <orient>wxVERTICAL</orient>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <font>
@@ -615,21 +615,21 @@
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>Requests:</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>Accepted Uploads:</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>Transferred:</label>
@@ -648,21 +648,21 @@
                                                 <size>5,10d</size>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>-</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>-</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="wxID_STATIC">
                                                     <label>-</label>
@@ -682,21 +682,21 @@
                                                 <size>5,10d</size>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="ST_TOTREQUESTS">
                                                     <label>?</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="ST_TOTACCEPTED">
                                                     <label>?</label>
                                                 </object>
                                             </object>
                                             <object class="sizeritem">
-                                                <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                                <flag>wxALIGN_LEFT|wxALL</flag>
                                                 <border>5</border>
                                                 <object class="wxStaticText" name="ST_TOTTRANSFERRED">
                                                     <label>?</label>
@@ -744,7 +744,7 @@
                         </object>
                     </object>
                     <object class="sizeritem">
-                        <flag>wxALIGN_CENTER_VERTICAL|wxALL|wxADJUST_MINSIZE</flag>
+                        <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
                         <border>5</border>
                         <option>1</option>
                         <object class="wxStaticText" name="ST_SERVERS">
@@ -851,7 +851,7 @@
                                                 <object class="wxBoxSizer">
                                                     <orient>wxVERTICAL</orient>
                                                     <object class="sizeritem">
-                                                        <flag>wxGROW|wxLEFT|wxADJUST_MINSIZE</flag>
+                                                        <flag>wxGROW|wxLEFT</flag>
                                                         <border>5</border>
                                                         <object class="wxStaticText" name="wxID_STATIC">
                                                             <label>IP or Address:</label>
@@ -871,7 +871,7 @@
                                                 <object class="wxBoxSizer">
                                                     <orient>wxVERTICAL</orient>
                                                     <object class="sizeritem">
-                                                        <flag>wxGROW|wxLEFT|wxADJUST_MINSIZE</flag>
+                                                        <flag>wxGROW|wxLEFT</flag>
                                                         <border>5</border>
                                                         <object class="wxStaticText" name="wxID_STATIC">
                                                             <label>Port:</label>
@@ -890,7 +890,7 @@
                                         </object>
                                     </object>
                                     <object class="sizeritem">
-                                        <flag>wxALIGN_LEFT|wxALL|wxADJUST_MINSIZE</flag>
+                                        <flag>wxALIGN_LEFT|wxALL</flag>
                                         <border>5</border>
                                         <object class="wxStaticText" name="wxID_STATIC">
                                             <label>Name:</label>

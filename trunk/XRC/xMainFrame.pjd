@@ -19,7 +19,7 @@
     <string name="resource_prefix">""</string>
     <bool name="use_two_step_construction">0</bool>
     <string name="current_platform">"&lt;All platforms&gt;"</string>
-    <string name="target_wx_version">"&lt;Any&gt;"</string>
+    <string name="target_wx_version">"2.6.2"</string>
     <string name="cpp_header_comment">"/////////////////////////////////////////////////////////////////////////////
 // Name:        %HEADER-FILENAME%
 // Purpose:     
@@ -94,7 +94,9 @@
     <string name="source_encoding">"&lt;System&gt;"</string>
     <string name="project_encoding">"&lt;System&gt;"</string>
     <string name="resource_archive">""</string>
+    <string name="resource_xrc_cpp">""</string>
     <bool name="use_resource_archive">0</bool>
+    <bool name="use_generated_xrc_cpp">0</bool>
     <bool name="archive_xrc_files">1</bool>
     <bool name="archive_image_files">1</bool>
   </header>
@@ -364,6 +366,7 @@
                 <string name="proxy-Class">"wxStaticText"</string>
                 <string name="proxy-Member variable name">""</string>
                 <string name="proxy-Label">"Contacts (0)"</string>
+                <long name="proxy-Wrapping width">-1</long>
                 <string name="proxy-Help text">""</string>
                 <string name="proxy-Tooltip text">""</string>
                 <string name="proxy-Background colour">""</string>
@@ -851,6 +854,7 @@
                         <string name="proxy-Class">"wxStaticText"</string>
                         <string name="proxy-Member variable name">""</string>
                         <string name="proxy-Label">"IP or Address:"</string>
+                        <long name="proxy-Wrapping width">-1</long>
                         <string name="proxy-Help text">""</string>
                         <string name="proxy-Tooltip text">""</string>
                         <string name="proxy-Background colour">""</string>
@@ -1001,6 +1005,7 @@
                         <string name="proxy-Class">"wxStaticText"</string>
                         <string name="proxy-Member variable name">""</string>
                         <string name="proxy-Label">"Port:"</string>
+                        <long name="proxy-Wrapping width">-1</long>
                         <string name="proxy-Help text">""</string>
                         <string name="proxy-Tooltip text">""</string>
                         <string name="proxy-Background colour">""</string>
@@ -1468,6 +1473,7 @@
                 <string name="proxy-Class">"wxStaticText"</string>
                 <string name="proxy-Member variable name">""</string>
                 <string name="proxy-Label">"Current Searches (0)"</string>
+                <long name="proxy-Wrapping width">-1</long>
                 <string name="proxy-Help text">""</string>
                 <string name="proxy-Tooltip text">""</string>
                 <string name="proxy-Background colour">""</string>
@@ -1735,6 +1741,7 @@
                   <string name="proxy-Class">"wxStaticText"</string>
                   <string name="proxy-Member variable name">""</string>
                   <string name="proxy-Label">"Name"</string>
+                  <long name="proxy-Wrapping width">-1</long>
                   <string name="proxy-Help text">""</string>
                   <string name="proxy-Tooltip text">""</string>
                   <string name="proxy-Background colour">""</string>
@@ -2037,6 +2044,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"Type"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -2166,6 +2174,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"Method"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -2630,6 +2639,7 @@
                 <string name="proxy-Class">"wxStaticText"</string>
                 <string name="proxy-Member variable name">""</string>
                 <string name="proxy-Label">"Search Results"</string>
+                <long name="proxy-Wrapping width">-1</long>
                 <string name="proxy-Help text">""</string>
                 <string name="proxy-Tooltip text">""</string>
                 <string name="proxy-Background colour">""</string>
@@ -3056,6 +3066,7 @@
                 <string name="proxy-Class">"wxStaticText"</string>
                 <string name="proxy-Member variable name">""</string>
                 <string name="proxy-Label">"Shared Files (0)"</string>
+                <long name="proxy-Wrapping width">-1</long>
                 <string name="proxy-Help text">""</string>
                 <string name="proxy-Tooltip text">""</string>
                 <string name="proxy-Background colour">""</string>
@@ -3289,6 +3300,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"Current Session"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -3345,6 +3357,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"Requests:"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -3401,6 +3414,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"Accepted Uploads:"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -3457,6 +3471,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"Transferred:"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -3565,6 +3580,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"-"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -3621,6 +3637,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"-"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -3677,6 +3694,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"-"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -3785,6 +3803,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"?"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -3841,6 +3860,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"?"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -3897,6 +3917,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"?"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -3979,6 +4000,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"Total"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -4035,6 +4057,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"Requests:"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -4091,6 +4114,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"Accepted Uploads:"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -4147,6 +4171,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"Transferred:"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -4255,6 +4280,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"-"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -4311,6 +4337,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"-"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -4367,6 +4394,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"-"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -4475,6 +4503,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"?"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -4531,6 +4560,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"?"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -4587,6 +4617,7 @@
                       <string name="proxy-Class">"wxStaticText"</string>
                       <string name="proxy-Member variable name">""</string>
                       <string name="proxy-Label">"?"</string>
+                      <long name="proxy-Wrapping width">-1</long>
                       <string name="proxy-Help text">""</string>
                       <string name="proxy-Tooltip text">""</string>
                       <string name="proxy-Background colour">""</string>
@@ -4788,6 +4819,14 @@
             <string name="proxy-type">"wbBoxSizerProxy"</string>
             <string name="proxy-Orientation">"Vertical"</string>
             <string name="proxy-Member variable name">""</string>
+            <string name="proxy-AlignH">"Centre"</string>
+            <string name="proxy-AlignV">"Centre"</string>
+            <long name="proxy-Stretch factor">0</long>
+            <long name="proxy-Border">5</long>
+            <bool name="proxy-wxLEFT">1</bool>
+            <bool name="proxy-wxRIGHT">1</bool>
+            <bool name="proxy-wxTOP">1</bool>
+            <bool name="proxy-wxBOTTOM">1</bool>
             <bool name="proxy-wxSHAPED">0</bool>
             <bool name="proxy-wxADJUST_MINSIZE">0</bool>
             <bool name="proxy-wxFIXED_MINSIZE">0</bool>
@@ -4883,6 +4922,7 @@
                 <string name="proxy-Class">"wxStaticText"</string>
                 <string name="proxy-Member variable name">""</string>
                 <string name="proxy-Label">"Servers (0)"</string>
+                <long name="proxy-Wrapping width">-1</long>
                 <string name="proxy-Help text">""</string>
                 <string name="proxy-Tooltip text">""</string>
                 <string name="proxy-Background colour">""</string>
@@ -5236,8 +5276,6 @@
                         <string name="proxy-Id name">"ID_TEXTCTRL2"</string>
                         <long name="proxy-Id value">10015</long>
                         <string name="proxy-Class">"wxTextCtrl"</string>
-                        <string name="proxy-Tab label">"Server Info"</string>
-                        <string name="proxy-Tab icon">""</string>
                         <string name="proxy-Member variable name">""</string>
                         <string name="proxy-Initial value">""</string>
                         <long name="proxy-Max length">0</long>
@@ -5291,6 +5329,8 @@
                         <bool name="proxy-wxFIXED_MINSIZE">0</bool>
                         <string name="proxy-Custom arguments">""</string>
                         <string name="proxy-Custom ctor arguments">""</string>
+                        <string name="proxy-Tab label">"Server Info"</string>
+                        <string name="proxy-Tab icon">""</string>
                       </document>
                       <document>
                         <string name="title">"wxTextCtrl: ID_TEXTCTRL3"</string>
@@ -5306,8 +5346,6 @@
                         <string name="proxy-Id name">"ID_TEXTCTRL3"</string>
                         <long name="proxy-Id value">10016</long>
                         <string name="proxy-Class">"wxTextCtrl"</string>
-                        <string name="proxy-Tab label">"Log"</string>
-                        <string name="proxy-Tab icon">""</string>
                         <string name="proxy-Member variable name">""</string>
                         <string name="proxy-Initial value">""</string>
                         <long name="proxy-Max length">0</long>
@@ -5361,6 +5399,8 @@
                         <bool name="proxy-wxFIXED_MINSIZE">0</bool>
                         <string name="proxy-Custom arguments">""</string>
                         <string name="proxy-Custom ctor arguments">""</string>
+                        <string name="proxy-Tab label">"Log"</string>
+                        <string name="proxy-Tab icon">""</string>
                       </document>
                     </document>
                     <document>
@@ -5670,6 +5710,7 @@
                         <string name="proxy-Class">"wxStaticText"</string>
                         <string name="proxy-Member variable name">""</string>
                         <string name="proxy-Label">"IP or Address:"</string>
+                        <long name="proxy-Wrapping width">-1</long>
                         <string name="proxy-Help text">""</string>
                         <string name="proxy-Tooltip text">""</string>
                         <string name="proxy-Background colour">""</string>
@@ -5820,6 +5861,7 @@
                         <string name="proxy-Class">"wxStaticText"</string>
                         <string name="proxy-Member variable name">""</string>
                         <string name="proxy-Label">"Port:"</string>
+                        <long name="proxy-Wrapping width">-1</long>
                         <string name="proxy-Help text">""</string>
                         <string name="proxy-Tooltip text">""</string>
                         <string name="proxy-Background colour">""</string>
@@ -5946,6 +5988,7 @@
                     <string name="proxy-Class">"wxStaticText"</string>
                     <string name="proxy-Member variable name">""</string>
                     <string name="proxy-Label">"Name:"</string>
+                    <long name="proxy-Wrapping width">-1</long>
                     <string name="proxy-Help text">""</string>
                     <string name="proxy-Tooltip text">""</string>
                     <string name="proxy-Background colour">""</string>
