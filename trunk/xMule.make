@@ -6,32 +6,32 @@ ifndef CONFIG
 endif
 
 ifeq ($(CONFIG),Debug)
-  BINDIR = bin
-  LIBDIR = .
-  OBJDIR = obj/Debug
-  OUTDIR = bin
-  CPPFLAGS = -MD
+  BINDIR := bin
+  LIBDIR := .
+  OBJDIR := obj/Debug
+  OUTDIR := bin
+  CPPFLAGS := -MD
   CFLAGS += $(CPPFLAGS) -g `wx-config --cxxflags`
-  CXXFLAGS = $(CFLAGS)
+  CXXFLAGS := $(CFLAGS)
   LDFLAGS += -L$(BINDIR) -L$(LIBDIR) `wx-config --libs`
-  LDDEPS =
-  TARGET = xmule
+  LDDEPS :=
+  TARGET := xmule
 endif
 
 ifeq ($(CONFIG),Release)
-  BINDIR = bin
-  LIBDIR = .
-  OBJDIR = obj/Release
-  OUTDIR = bin
-  CPPFLAGS = -MD
+  BINDIR := bin
+  LIBDIR := .
+  OBJDIR := obj/Release
+  OUTDIR := bin
+  CPPFLAGS := -MD
   CFLAGS += $(CPPFLAGS) -O2 `wx-config --cxxflags`
-  CXXFLAGS = $(CFLAGS)
+  CXXFLAGS := $(CFLAGS)
   LDFLAGS += -L$(BINDIR) -L$(LIBDIR) -s `wx-config --libs`
-  LDDEPS =
-  TARGET = xmule
+  LDDEPS :=
+  TARGET := xmule
 endif
 
-OBJECTS = \
+OBJECTS := \
 	$(OBJDIR)/xApp.o \
 	$(OBJDIR)/xKadPanel.o \
 	$(OBJDIR)/xMainFrame.o \
@@ -44,71 +44,86 @@ OBJECTS = \
 	$(OBJDIR)/xServer.o \
 	$(OBJDIR)/xTag.o \
 
+RESOURCES := \
+
+CMD := $(subst \,\\,$(ComSpec)$(COMSPEC))
+ifeq (,$(CMD))
+  CMD_MKBINDIR := mkdir -p $(BINDIR)
+  CMD_MKLIBDIR := mkdir -p $(LIBDIR)
+  CMD_MKOUTDIR := mkdir -p $(OUTDIR)
+  CMD_MKOBJDIR := mkdir -p $(OBJDIR)
+else
+  CMD_MKBINDIR := $(CMD) /c if not exist $(subst /,\\,$(BINDIR)) mkdir $(subst /,\\,$(BINDIR))
+  CMD_MKLIBDIR := $(CMD) /c if not exist $(subst /,\\,$(LIBDIR)) mkdir $(subst /,\\,$(LIBDIR))
+  CMD_MKOUTDIR := $(CMD) /c if not exist $(subst /,\\,$(OUTDIR)) mkdir $(subst /,\\,$(OUTDIR))
+  CMD_MKOBJDIR := $(CMD) /c if not exist $(subst /,\\,$(OBJDIR)) mkdir $(subst /,\\,$(OBJDIR))
+endif
+
 .PHONY: clean
 
-$(OUTDIR)/$(TARGET): $(OBJECTS) $(LDDEPS)
+$(OUTDIR)/$(TARGET): $(OBJECTS) $(LDDEPS) $(RESOURCES)
 	@echo Linking xMule
-	-@if [ ! -d $(BINDIR) ]; then mkdir -p $(BINDIR); fi
-	-@if [ ! -d $(LIBDIR) ]; then mkdir -p $(LIBDIR); fi
-	-@if [ ! -d $(OUTDIR) ]; then mkdir -p $(OUTDIR); fi
-	@$(CXX) -o $@ $(OBJECTS) $(LDFLAGS)
+	-@$(CMD_MKBINDIR)
+	-@$(CMD_MKLIBDIR)
+	-@$(CMD_MKOUTDIR)
+	@$(CXX) -o $@ $(OBJECTS) $(LDFLAGS) $(RESOURCES)
 
 clean:
 	@echo Cleaning xMule
 	-@rm -rf $(OUTDIR)/$(TARGET) $(OBJDIR)
 
 $(OBJDIR)/xApp.o: xApp.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 $(OBJDIR)/xKadPanel.o: xMainFrame/xKadPanel.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 $(OBJDIR)/xMainFrame.o: xMainFrame/xMainFrame.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 $(OBJDIR)/xSearchPanel.o: xMainFrame/xSearchPanel.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 $(OBJDIR)/xServersPanel.o: xMainFrame/xServersPanel.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 $(OBJDIR)/xSharedFilesPanel.o: xMainFrame/xSharedFilesPanel.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 $(OBJDIR)/xTransfersPanel.o: xMainFrame/xTransfersPanel.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 $(OBJDIR)/xOptionsDialog.o: xMainFrame/xOptions/xOptionsDialog.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 $(OBJDIR)/xSafeFile.o: xCore/xSafeFile.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 $(OBJDIR)/xServer.o: xCore/xServer.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 $(OBJDIR)/xTag.o: xCore/xTag.cpp
-	-@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi
+	-@$(CMD_MKOBJDIR)
 	@echo $(notdir $<)
 	@$(CXX) $(CXXFLAGS) -o $@ -c $<
 

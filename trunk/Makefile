@@ -15,7 +15,7 @@ all: xMule
 
 Makefile: premake.lua
 	@echo ==== Regenerating Makefiles ====
-	@premake --target gnu
+	@premake --file $^ --target gnu
 
 xMule:
 	@echo ==== Building xMule ====
