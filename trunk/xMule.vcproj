@@ -62,7 +62,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="comctl32.lib rpcrt4.lib winmm.lib advapi32.lib wsock32.lib wxpngd.lib wxzlibd.lib wxjpegd.lib wxtiffd.lib wxbase27ud.lib wxbase27ud_net.lib wxbase27ud_odbc.lib wxbase27ud_xml.lib wxexpatd.lib wxmsw27ud_adv.lib wxmsw27ud_core.lib wxmsw27ud_html.lib wxmsw27ud_xrc.lib"
+				AdditionalDependencies="comctl32.lib rpcrt4.lib winmm.lib advapi32.lib wsock32.lib wxpngd.lib wxzlibd.lib wxjpegd.lib wxtiffd.lib wxbase26ud.lib wxbase26ud_net.lib wxbase26ud_odbc.lib wxbase26ud_xml.lib wxexpatd.lib wxmsw26ud_adv.lib wxmsw26ud_core.lib wxmsw26ud_html.lib wxmsw26ud_xrc.lib"
 				OutputFile="$(OutDir)/$(InputName)-Debug.exe"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="&quot;C:\wxWidgets-2.6.3\lib\vc_lib&quot;"
@@ -142,7 +142,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="comctl32.lib rpcrt4.lib winmm.lib advapi32.lib wsock32.lib wxpng.lib wxzlib.lib wxjpeg.lib wxtiff.lib wxbase27u.lib wxbase27u_net.lib wxbase27u_odbc.lib wxbase27u_xml.lib wxexpat.lib wxmsw27u_adv.lib wxmsw27u_core.lib wxmsw27u_html.lib wxmsw27u_xrc.lib"
+				AdditionalDependencies="comctl32.lib rpcrt4.lib winmm.lib advapi32.lib wsock32.lib wxpng.lib wxzlib.lib wxjpeg.lib wxtiff.lib wxbase26u.lib wxbase26u_net.lib wxbase26u_odbc.lib wxbase26u_xml.lib wxexpat.lib wxmsw26u_adv.lib wxmsw26u_core.lib wxmsw26u_html.lib wxmsw26u_xrc.lib"
 				OutputFile="$(OutDir)/$(InputName).exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="&quot;C:\wxWidgets-2.6.3\lib\vc_lib&quot;"
