@@ -26,17 +26,16 @@ xTransfersPanel::xTransfersPanel(wxWindow* aParent) : wxPanel(aParent)
 
     // First ToolBar
     wxToolBar* SwitchToolBar = new wxToolBar( this, ID_SWITCHTOOLBAR, wxDefaultPosition, wxDefaultSize, wxTB_FLAT|wxTB_HORIZONTAL|wxTB_TEXT|wxTB_NODIVIDER|wxTB_HORZ_LAYOUT );
-    SwitchToolBar->SetToolBitmapSize(wxSize(16, 16));
+    SwitchToolBar->SetBackgroundColour(GetBackgroundColour());
+	SwitchToolBar->SetToolBitmapSize(wxSize(16, 16));
     SwitchToolBar->AddTool(ID_SWITCH1, wxT("Downloads (0)                    "), wxBitmap(downloads_xpm), _T(""), wxITEM_NORMAL);
     SwitchToolBar->Realize();
     ToolbarsSizer->Add(SwitchToolBar, 0, wxALIGN_CENTER_VERTICAL|wxALL, 0);
 
-    // Add Space
-    //ToolbarsSizer->Add(22, 8, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5);
-
     // Second ToolBar
     wxToolBar* ViewsToolBar = new wxToolBar( this, ID_VIEWSTOOLBAR, wxDefaultPosition, wxDefaultSize, wxTB_FLAT|wxTB_HORIZONTAL|wxTB_NODIVIDER );
-    ViewsToolBar->SetToolBitmapSize(wxSize(16, 16));
+	ViewsToolBar->SetBackgroundColour(GetBackgroundColour());
+	ViewsToolBar->SetToolBitmapSize(wxSize(16, 16));
     ViewsToolBar->AddTool(ID_SPLITWINDOW, _T(""), wxBitmap(splitwindow_xpm), _T("Split Window"), wxITEM_RADIO);
     ViewsToolBar->AddTool(ID_DOWNLOADS, _T(""), wxBitmap(downloads_xpm), _T("Downloads"), wxITEM_RADIO);
     ViewsToolBar->AddTool(ID_UPLOADING, _T(""), wxBitmap(uploading_xpm), _T("Uploading"), wxITEM_RADIO);
