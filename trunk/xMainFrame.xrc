@@ -496,9 +496,7 @@
                                                     <font>
                                                         <size>8</size>
                                                         <family>swiss</family>
-                                                        <style>normal</style>
                                                         <weight>bold</weight>
-                                                        <underlined>0</underlined>
                                                         <face>Microsoft Sans Serif</face>
                                                     </font>
                                                     <label>Current Session</label>
@@ -606,9 +604,7 @@
                                                     <font>
                                                         <size>8</size>
                                                         <family>swiss</family>
-                                                        <style>normal</style>
                                                         <weight>bold</weight>
-                                                        <underlined>0</underlined>
                                                         <face>Microsoft Sans Serif</face>
                                                     </font>
                                                     <label>Total</label>
@@ -767,6 +763,7 @@
                             <style>wxSP_3DSASH|wxSP_LIVE_UPDATE|wxNO_BORDER</style>
                             <orientation>horizontal</orientation>
                             <sashpos>200</sashpos>
+                            <minsize>0</minsize>
                             <object class="wxListCtrl" name="LC_SERVERS">
                                 <style>wxLC_REPORT</style>
                             </object>
