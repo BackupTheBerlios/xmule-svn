@@ -7,10 +7,13 @@
 #include "xCore/xServer.h"             // xServer
 #include "xMainFrame/xMainFrame.h"     // xMainFrame
 #include "xMainFrame/xServersPanel.h"  // xServersPanel
+#include "xMainFrame/XPMs/SplashScreen.xpm"	   // Splash Screen Image
 
-#include <wx/listctrl.h>               // wxListCtrl
+#include <wx/bitmap.h>				   // wxBitmap
 #include <wx/filefn.h>                 // wxFileExists
+#include <wx/listctrl.h>               // wxListCtrl
 #include <wx/msgdlg.h>                 // wxMessageBox
+#include <wx/splash.h>                 // wxSplashScreen
 #include <wx/tooltip.h>                // wxToolTip
 #include <wx/xrc/xmlres.h>             // wxXmlResource
 
@@ -137,6 +140,11 @@ bool xApp::OnInit()
     wxToolTip::Enable(true); // Enable tooltips globally
     wxToolTip::SetDelay(500);
 
+	wxBitmap SplashScreenImage(SplashScreen_xpm);
+	if (SplashScreenImage.Ok())
+	{
+		wxSplashScreen* Splash = new wxSplashScreen(SplashScreenImage, wxSPLASH_CENTRE_ON_SCREEN|wxSPLASH_TIMEOUT, 3000, NULL, wxID_ANY);
+	}
     MainFrame = new xMainFrame(); // Create the main frame
     SetTopWindow(MainFrame);
     MainFrame->Show();
