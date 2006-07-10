@@ -156,7 +156,6 @@
 			/>
 			<Tool
 				Name="VCManifestTool"
-				AdditionalManifestFiles="$(InputDir)\xMule.manifest"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
