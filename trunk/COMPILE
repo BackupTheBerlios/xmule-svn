@@ -8,4 +8,4 @@ Linux:
 --------
 Compiler: GCC 4.x. Older versions may work as well, but untested.
 Library: wxGTK-2.6.3 (--enable-unicode --enable-monolithic --enable-static --enable-debug).
-Notes: Used Premake-3.1-RC3 for creating the makefiles.  Makefiles are provided.
+Notes: Used Premake-3.1 for creating the makefiles.  Makefiles are provided.

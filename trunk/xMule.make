@@ -16,6 +16,7 @@ ifeq ($(CONFIG),Debug)
   LDFLAGS += -L$(BINDIR) -L$(LIBDIR) `wx-config --libs`
   LDDEPS :=
   TARGET := xmule
+  BLDCMD = $(CXX) -o $(OUTDIR)/$(TARGET) $(OBJECTS) $(LDFLAGS) $(RESOURCES)
 endif
 
 ifeq ($(CONFIG),Release)
@@ -29,6 +30,7 @@ ifeq ($(CONFIG),Release)
   LDFLAGS += -L$(BINDIR) -L$(LIBDIR) -s `wx-config --libs`
   LDDEPS :=
   TARGET := xmule
+  BLDCMD = $(CXX) -o $(OUTDIR)/$(TARGET) $(OBJECTS) $(LDFLAGS) $(RESOURCES)
 endif
 
 OBJECTS := \
@@ -66,7 +68,7 @@ $(OUTDIR)/$(TARGET): $(OBJECTS) $(LDDEPS) $(RESOURCES)
 	-@$(CMD_MKBINDIR)
 	-@$(CMD_MKLIBDIR)
 	-@$(CMD_MKOUTDIR)
-	@$(CXX) -o $@ $(OBJECTS) $(LDFLAGS) $(RESOURCES)
+	@$(BLDCMD)
 
 clean:
 	@echo Cleaning xMule
