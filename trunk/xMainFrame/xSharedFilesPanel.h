@@ -27,7 +27,7 @@ private:
     wxListCtrl* SharedFilesListCtrl;
 
     void InitListCtrl();
-    
+
     DECLARE_EVENT_TABLE()
 };
 

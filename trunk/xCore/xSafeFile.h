@@ -90,7 +90,7 @@ inline wxUint32 PeekUInt32(const void* p)
 
 inline wxUint64 PeekUInt64(const void* p)
 {
-	return *((wxUint64*)p);
+    return *((wxUint64*)p);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -113,7 +113,7 @@ inline void PokeUInt32(void* p, wxUint32 nVal)
 
 inline void PokeUInt64(void* p, wxUint64 nVal)
 {
-	*((wxUint64*)p) = nVal;
+    *((wxUint64*)p) = nVal;
 }
 
 ///////////////////////////////////////////////////////////////////////////////

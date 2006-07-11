@@ -20,7 +20,7 @@ public:
 protected:
     void OnPaint(wxPaintEvent& event);
     void OnErase(wxEraseEvent&) { wxClientDC dc(this); dc.Clear(); dc.DrawIcon(wxIcon(xmule_xpm),0,50); }
-    
+
     DECLARE_EVENT_TABLE()
 };
 
