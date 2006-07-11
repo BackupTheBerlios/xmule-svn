@@ -53,11 +53,11 @@ void xMainFrame::CreateControls()
     
     // Create the Kad panel
     KadPanel = new xKadPanel(this);
+	KadPanel->Hide();
     MainSizer->Add(KadPanel, 1, wxGROW, 0);
 
     // Create the Servers panel
     ServersPanel = new xServersPanel(this);
-	ServersPanel->Hide();
 	MainSizer->Add(ServersPanel, 1, wxGROW, 0);
 
     // Create the Transfers panel
@@ -75,7 +75,7 @@ void xMainFrame::CreateControls()
     SharedFilesPanel->Hide();
 	MainSizer->Add(SharedFilesPanel, 1, wxGROW, 0);
 
-	CurrentPanel=KadPanel;
+	CurrentPanel=ServersPanel;
 }
 
 void xMainFrame::CreateToolBar()
@@ -94,6 +94,7 @@ void xMainFrame::CreateToolBar()
     myToolBar->AddTool(TB_OPTIONS, wxT("Options"), wxBitmap(options_xpm), _T(""), wxITEM_NORMAL);
     myToolBar->AddTool(TB_TOOLS, wxT("Tools"), wxBitmap(tools_xpm), _T(""), wxITEM_NORMAL);
     myToolBar->Realize();
+	myToolBar->ToggleTool(TB_SERVERS, true);
     SetToolBar(myToolBar);
 }
 
