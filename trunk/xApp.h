@@ -5,8 +5,11 @@
 #ifndef _XAPP_H_
 #define _XAPP_H_
 
+#ifdef __WXMSW__
+    #include <msvc/wx/setup.h>         // Library file names
+#endif
+
 #include <wx/app.h>                    // wxApp
-#include <msvc/wx/setup.h>             // Library Names! :)
 
 class xMainFrame;
 
