@@ -6,6 +6,7 @@
 #define _XAPP_H_
 
 #include <wx/app.h>                    // wxApp
+#include <msvc/wx/setup.h>             // Library Names! :)
 
 class xMainFrame;
 
