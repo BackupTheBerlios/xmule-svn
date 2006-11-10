@@ -1,3 +1,20 @@
+// The xMule Project - A Peer-2-Peer File Sharing Program
+//
+// Copyright (C) 2004-2006 Avi Vahl ( avivahl [AT] gmail.com )
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of Version 2 of the GNU General Public
+// License as published by the Free Software Foundation.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+
 #ifndef _XOPCODES_H_
 #define _XOPCODES_H_
 
@@ -87,7 +104,7 @@ struct ServerMet_Struct
 #define TAGTYPE_STR14           0x1E
 #define TAGTYPE_STR15           0x1F
 #define TAGTYPE_STR16           0x20
-// The following 6 tag types are accepted by eMule 0.42f (02-Mai-2004) in receiving
+// The following 6 tag types are accepted by eMule 0.42f (02-May-2004) in receiving
 // code only because of a flaw, those tags are handled correctly, but should not be
 // handled at all
 #define TAGTYPE_STR17           0x21
@@ -97,8 +114,8 @@ struct ServerMet_Struct
 #define TAGTYPE_STR21           0x25
 #define TAGTYPE_STR22           0x26
 
-#define MAX_EMULE_FILE_SIZE 0x4000000000ui64 // = 2^38 = 256GB
-#define OLD_MAX_EMULE_FILE_SIZE 4290048000ui64  // (4294967295/PARTSIZE)*PARTSIZE = ~4GB
+#define	MAX_EMULE_FILE_SIZE 0x4000000000ui64 // = 2^38 = 256GB
+#define OLD_MAX_EMULE_FILE_SIZE	4290048000ui64 // (4294967295/PARTSIZE)*PARTSIZE = ~4GB
 
 #define ED2KFTSTR_AUDIO         "Audio" // value for eD2K tag FT_FILETYPE
 #define ED2KFTSTR_VIDEO         "Video" // value for eD2K tag FT_FILETYPE

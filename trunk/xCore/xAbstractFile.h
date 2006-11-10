@@ -1,3 +1,22 @@
+// The xMule Project - A Peer-2-Peer File Sharing Program
+//
+// Copyright (C) 2004-2006 Avi Vahl ( avivahl [AT] gmail.com )
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of Version 2 of the GNU General Public
+// License as published by the Free Software Foundation.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+
+// Status: eMule 0.47c (TODO:KAD)
+
 #ifndef _XABSTRACTFILE_H_
 #define _XABSTRACTFILE_H_
 
@@ -28,7 +47,7 @@ public:
     const wxString& GetFileName() const { return m_strFileName; }
     virtual void SetFileName(const wxChar* pszFileName, bool bReplaceInvalidFileSystemChars = false, bool bAutoSetFileType = true); // 'bReplaceInvalidFileSystemChars' is set to 'false' for backward compatibility!
 
-    // returns the ED2K file type
+    // returns the ED2K file type (an ASCII string)
     const wxString& GetFileType() const { return m_strFileType; }
     virtual void SetFileType(const wxChar* pszFileType);
 
@@ -43,8 +62,8 @@ public:
     virtual void SetFileSize(wxUint64 nFileSize) { m_nFileSize = nFileSize; }
     bool IsLargeFile() const { return m_nFileSize > (wxUint64)OLD_MAX_EMULE_FILE_SIZE; }
 
-    uint32 GetIntTagValue(wxUint8 tagname) const;
-    uint32 GetIntTagValue(const char* tagname) const;
+    wxUint32 GetIntTagValue(wxUint8 tagname) const;
+    wxUint32 GetIntTagValue(const char* tagname) const;
     bool GetIntTagValue(wxUint8 tagname, wxUint32& ruValue) const;
     wxUint64 GetInt64TagValue(wxUint8 tagname) const;
     wxUint64 GetInt64TagValue(const char* tagname) const;
@@ -60,23 +79,28 @@ public:
     xTag* GetTag(const char* tagname) const;
     const std::vector<xTag*>& GetTags() const { return taglist; }
     void AddTagUnique(xTag* pTag);
+	void DeleteTag(wxUint8 tagname);
+	void DeleteTag(xTag* pTag);
     void ClearTags();
     void CopyTags(const std::vector<xTag*>& tags);
     virtual bool IsPartFile()const { return false; }
 
     bool HasComment() const { return m_bHasComment; }
     void SetHasComment(bool in) { m_bHasComment = in; }
-    wxUint32 UserRating() const { return m_uUserRating; }
+    wxUint32 UserRating(/*bool bKadSearchIndicator = false TODO:KAD*/) const { return /*(bKadSearchIndicator && m_bKadCommentSearchRunning) ? 6 :*/ m_uUserRating; }
     bool HasRating() const { return m_uUserRating > 0; }
     bool HasBadRating() const { return ( HasRating() && (m_uUserRating < 2)); }
-    void SetUserRating(UINT in) { m_uUserRating = in; }
+    void SetUserRating(wxUint32 in) { m_uUserRating = in; }
     const wxString& GetFileComment();
     wxUint32 GetFileRating();
     void LoadComment();
-    virtual void UpdateFileRatingCommentAvail() = 0;
+    virtual void UpdateFileRatingCommentAvail(bool bForceUpdate = false) = 0;
 
-    // bool AddNote(Kademlia::CEntry* pEntry); TODO:KAD
-    // const CKadEntryPtrList& getNotes() const { return m_kadNotes; }
+/*    bool AddNote(Kademlia::CEntry* pEntry); TODO:KAD
+    const CKadEntryPtrList& getNotes() const { return m_kadNotes; }
+
+    bool IsKadCommentSearchRunning() const { return m_bKadCommentSearchRunning; }
+    void SetKadCommentSearchRunning(bool bVal); TODO:KAD*/
 
 protected:
     wxString m_strFileName;
@@ -87,6 +111,7 @@ protected:
     bool m_bCommentLoaded;
     wxUint32 m_uUserRating;
     bool m_bHasComment;
+    // bool m_bKadCommentSearchRunning; TODO:KAD
     wxString m_strFileType;
     std::vector<xTag*> taglist;
     // CKadEntryPtrList m_kadNotes; TODO:KAD

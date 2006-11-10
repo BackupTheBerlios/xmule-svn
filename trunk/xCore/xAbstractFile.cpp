@@ -1,3 +1,22 @@
+// The xMule Project - A Peer-2-Peer File Sharing Program
+//
+// Copyright (C) 2004-2006 Avi Vahl ( avivahl [AT] gmail.com )
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of Version 2 of the GNU General Public
+// License as published by the Free Software Foundation.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+
+// Status: eMule 0.47c (TODO:KAD, TODO:FILE COMMENTS)
+
 #include "xAbstractFile.h"             // xAbstractFile
 #include "xUtils.h"                    // md4cpy(), md4clr()
 
@@ -15,6 +34,7 @@ xAbstractFile::xAbstractFile()
     m_bCommentLoaded = false;
     m_uUserRating = 0;
     m_bHasComment = false;
+    // m_bKadCommentSearchRunning = false; TODO:KAD
 }
 
 xAbstractFile::xAbstractFile(const xAbstractFile* pAbstractFile)
@@ -28,8 +48,9 @@ xAbstractFile::xAbstractFile(const xAbstractFile* pAbstractFile)
     m_uUserRating = pAbstractFile->m_uUserRating;
     m_bHasComment = pAbstractFile->m_bHasComment;
     m_strFileType = pAbstractFile->m_strFileType;
+/*	m_bKadCommentSearchRunning = pAbstractFile->m_bKadCommentSearchRunning; TODO:KAD
 
-/*    const CTypedPtrList<CPtrList, Kademlia::CEntry*>& list = pAbstractFile->getNotes(); TODO:KAD
+    const CTypedPtrList<CPtrList, Kademlia::CEntry*>& list = pAbstractFile->getNotes();
     for(POSITION pos = list.GetHeadPosition(); pos != NULL; )
     {
         Kademlia::CEntry* entry = list.GetNext(pos);
@@ -94,13 +115,17 @@ void xAbstractFile::LoadComment()
 void xAbstractFile::CopyTags(const std::vector<xTag*>& tags)
 {
     for (int i = 0; i < tags.size(); i++)
+    {
         taglist.push_back(new xTag(*tags[i]));
+    }
 }
 
 void xAbstractFile::ClearTags()
 {
     for (int i = 0; i < taglist.size(); i++)
+    {
         delete taglist[i];
+    }
     taglist.clear();
 }
 
@@ -164,30 +189,30 @@ void xAbstractFile::SetFileHash(const unsigned char* pucFileHash)
     md4cpy(m_abyFileHash, pucFileHash);
 }
 
-bool xAbstractFile::HasNullHash()const
+bool xAbstractFile::HasNullHash() const
 {
     return isnulmd4(m_abyFileHash);
 }
 
 wxUint32 xAbstractFile::GetIntTagValue(wxUint8 tagname) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         const xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==tagname && pTag->IsInt())
+        if (pTag->GetNameID() == tagname && pTag->IsInt())
         {
             return pTag->GetInt();
         }
     }
-    return NULL;
+    return 0;
 }
 
 bool xAbstractFile::GetIntTagValue(wxUint8 tagname, wxUint32& ruValue) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         const xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==tagname && pTag->IsInt())
+        if (pTag->GetNameID() == tagname && pTag->IsInt())
         {
             ruValue = pTag->GetInt();
             return true;
@@ -196,38 +221,38 @@ bool xAbstractFile::GetIntTagValue(wxUint8 tagname, wxUint32& ruValue) const
     return false;
 }
 
-wxUint64 xAbstractFile::GetInt64TagValue(const char* tagname)const
+wxUint64 xAbstractFile::GetInt64TagValue(const char* tagname) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         const xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==0 && pTag->IsInt64(true) && CmpED2KTagName(pTag->GetName(), tagname)==0)
+        if (pTag->GetNameID() == 0 && pTag->IsInt64(true) && CmpED2KTagName(pTag->GetName(), tagname) == 0)
         {
             return pTag->GetInt64();
         }
     }
-    return NULL;
+    return 0;
 }
 
-wxUint64 xAbstractFile::GetInt64TagValue(wxUint8 tagname)const
+wxUint64 xAbstractFile::GetInt64TagValue(wxUint8 tagname) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         const xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==tagname && pTag->IsInt64(true))
+        if (pTag->GetNameID() == tagname && pTag->IsInt64(true))
         {
             return pTag->GetInt64();
         }
     }
-    return NULL;
+    return 0;
 }
 
-bool xAbstractFile::GetInt64TagValue(wxUint8 tagname, wxUint64& ruValue)const
+bool xAbstractFile::GetInt64TagValue(wxUint8 tagname, wxUint64& ruValue) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         const xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==tagname && pTag->IsInt64(true))
+        if (pTag->GetNameID() == tagname && pTag->IsInt64(true))
         {
             ruValue = pTag->GetInt64();
             return true;
@@ -236,25 +261,25 @@ bool xAbstractFile::GetInt64TagValue(wxUint8 tagname, wxUint64& ruValue)const
     return false;
 }
 
-wxUint32 xAbstractFile::GetIntTagValue(const char* tagname)const
+wxUint32 xAbstractFile::GetIntTagValue(const char* tagname) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         const xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==0 && pTag->IsInt() && CmpED2KTagName(pTag->GetName(), tagname)==0)
+        if (pTag->GetNameID() == 0 && pTag->IsInt() && CmpED2KTagName(pTag->GetName(), tagname) == 0)
         {
             return pTag->GetInt();
         }
     }
-    return NULL;
+    return 0;
 }
 
 void xAbstractFile::SetIntTagValue(wxUint8 tagname, wxUint32 uValue)
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==tagname && pTag->IsInt())
+        if (pTag->GetNameID() == tagname && pTag->IsInt())
         {
             pTag->SetInt(uValue);
             return;
@@ -266,10 +291,10 @@ void xAbstractFile::SetIntTagValue(wxUint8 tagname, wxUint32 uValue)
 
 void xAbstractFile::SetInt64TagValue(wxUint8 tagname, wxUint64 uValue)
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==tagname && pTag->IsInt64(true))
+        if (pTag->GetNameID() == tagname && pTag->IsInt64(true))
         {
             pTag->SetInt64(uValue);
             return;
@@ -281,10 +306,10 @@ void xAbstractFile::SetInt64TagValue(wxUint8 tagname, wxUint64 uValue)
 
 const wxString& xAbstractFile::GetStrTagValue(wxUint8 tagname) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         const xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==tagname && pTag->IsStr())
+        if (pTag->GetNameID() == tagname && pTag->IsStr())
         {
             return pTag->GetStr();
         }
@@ -294,10 +319,10 @@ const wxString& xAbstractFile::GetStrTagValue(wxUint8 tagname) const
 
 const wxString& xAbstractFile::GetStrTagValue(const char* tagname) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         const xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==0 && pTag->IsStr() && CmpED2KTagName(pTag->GetName(), tagname)==0)
+        if (pTag->GetNameID() == 0 && pTag->IsStr() && CmpED2KTagName(pTag->GetName(), tagname) == 0)
         {
             return pTag->GetStr();
         }
@@ -307,9 +332,10 @@ const wxString& xAbstractFile::GetStrTagValue(const char* tagname) const
 
 void xAbstractFile::SetStrTagValue(wxUint8 tagname, const wxChar* pszValue)
 {
-    for (int i = 0; i < taglist.GetSize(); i++){
+    for (int i = 0; i < taglist.size(); i++)
+    {
         xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==tagname && pTag->IsStr())
+        if (pTag->GetNameID() == tagname && pTag->IsStr())
         {
             pTag->SetStr(pszValue);
             return;
@@ -321,10 +347,10 @@ void xAbstractFile::SetStrTagValue(wxUint8 tagname, const wxChar* pszValue)
 
 xTag* xAbstractFile::GetTag(wxUint8 tagname, wxUint8 tagtype) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==tagname && pTag->GetType()==tagtype)
+        if (pTag->GetNameID() == tagname && pTag->GetType() == tagtype)
         {
             return pTag;
         }
@@ -334,10 +360,10 @@ xTag* xAbstractFile::GetTag(wxUint8 tagname, wxUint8 tagtype) const
 
 xTag* xAbstractFile::GetTag(const char* tagname, wxUint8 tagtype) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==0 && pTag->GetType()==tagtype && CmpED2KTagName(pTag->GetName(), tagname)==0)
+        if (pTag->GetNameID() == 0 && pTag->GetType() == tagtype && CmpED2KTagName(pTag->GetName(), tagname) == 0)
         {
             return pTag;
         }
@@ -347,10 +373,10 @@ xTag* xAbstractFile::GetTag(const char* tagname, wxUint8 tagtype) const
 
 xTag* xAbstractFile::GetTag(wxUint8 tagname) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==tagname)
+        if (pTag->GetNameID() == tagname)
         {
             return pTag;
         }
@@ -360,13 +386,47 @@ xTag* xAbstractFile::GetTag(wxUint8 tagname) const
 
 xTag* xAbstractFile::GetTag(const char* tagname) const
 {
-    for (int i = 0; i < taglist.GetSize(); i++)
+    for (int i = 0; i < taglist.size(); i++)
     {
         xTag* pTag = taglist[i];
-        if (pTag->GetNameID()==0 && CmpED2KTagName(pTag->GetName(), tagname)==0)
+        if (pTag->GetNameID() == 0 && CmpED2KTagName(pTag->GetName(), tagname) == 0)
         {
             return pTag;
         }
     }
     return NULL;
 }
+
+void xAbstractFile::DeleteTag(xTag* pTag)
+{
+    for (int i = 0; i < taglist.size(); i++)
+    {
+        if (taglist[i] == pTag)
+        {
+            taglist.RemoveAt(i);
+            delete pTag;
+            return;
+        }
+    }
+}
+
+void xAbstractFile::DeleteTag(wxUint8 tagname)
+{
+	for (int i = 0; i < taglist.GetSize(); i++)
+    {
+        xTag* pTag = taglist[i];
+        if (pTag->GetNameID() == tagname)
+        {
+            taglist.RemoveAt(i);
+            delete pTag;
+            return;
+        }
+    }
+}
+
+/*void xAbstractFile::SetKadCommentSearchRunning(bool bVal){ TODO:KAD
+	if (bVal != m_bKadCommentSearchRunning){
+		m_bKadCommentSearchRunning = bVal;
+		UpdateFileRatingCommentAvail(true);
+	}
+}*/
