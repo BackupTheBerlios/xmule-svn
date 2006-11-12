@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.1\include&quot;;&quot;C:\wxMSW-2.7.1\lib\vc_lib\mswud&quot;"
+				AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.2\include&quot;;&quot;C:\wxMSW-2.7.2\lib\vc_lib\mswud&quot;"
 				PreprocessorDefinitions="__WXDEBUG__"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -55,7 +55,7 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.1\include&quot;"
+				AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.2\include&quot;"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -65,7 +65,7 @@
 				AdditionalDependencies="comctl32.lib rpcrt4.lib winmm.lib wsock32.lib"
 				OutputFile="$(OutDir)/$(InputName)-Debug.exe"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;C:\wxMSW-2.7.1\lib\vc_lib&quot;"
+				AdditionalLibraryDirectories="&quot;C:\wxMSW-2.7.2\lib\vc_lib&quot;"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/$(ProjectName).pdb"
 				SubSystem="2"
@@ -122,7 +122,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="3"
-				AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.1\include&quot;;&quot;C:\wxMSW-2.7.1\lib\vc_lib\mswu&quot;"
+				AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.2\include&quot;;&quot;C:\wxMSW-2.7.2\lib\vc_lib\mswu&quot;"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
 				WarningLevel="4"
@@ -134,7 +134,7 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.1\include&quot;"
+				AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.2\include&quot;"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -144,7 +144,7 @@
 				AdditionalDependencies="comctl32.lib rpcrt4.lib winmm.lib wsock32.lib"
 				OutputFile="$(OutDir)/$(InputName).exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="&quot;C:\wxMSW-2.7.1\lib\vc_lib&quot;"
+				AdditionalLibraryDirectories="&quot;C:\wxMSW-2.7.2\lib\vc_lib&quot;"
 				GenerateDebugInformation="false"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -333,7 +333,7 @@
 					>
 					<Tool
 						Name="VCResourceCompilerTool"
-						AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.1\include&quot;"
+						AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.2\include&quot;"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -341,7 +341,7 @@
 					>
 					<Tool
 						Name="VCResourceCompilerTool"
-						AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.1\include&quot;"
+						AdditionalIncludeDirectories="&quot;C:\wxMSW-2.7.2\include&quot;"
 					/>
 				</FileConfiguration>
 			</File>

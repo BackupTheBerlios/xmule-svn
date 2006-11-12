@@ -31,7 +31,11 @@ END_EVENT_TABLE()
 
 xSearchPanel::xSearchPanel(wxWindow* aParent)
 {
-    wxXmlResource::Get()->LoadPanel(this, aParent, wxT("SEARCH_PANEL"));
+    if (!wxXmlResource::Get()->LoadPanel(this, aParent, wxT("SEARCH_PANEL")))
+    {
+        return;
+    }
+
     SearchText=XRCCTRL(*this, "ID_NAMETEXT", wxTextCtrl);
     SearchUnicode=XRCCTRL(*this, "ID_UNICODECHECK", wxCheckBox);
     SearchType=XRCCTRL(*this, "ID_TYPECHOICE", wxChoice);

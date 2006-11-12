@@ -28,7 +28,10 @@ END_EVENT_TABLE()
 
 xSharedFilesPanel::xSharedFilesPanel(wxWindow* aParent)
 {
-    wxXmlResource::Get()->LoadPanel(this, aParent, wxT("SHAREDFILES_PANEL"));
+    if (!wxXmlResource::Get()->LoadPanel(this, aParent, wxT("SHAREDFILES_PANEL")))
+    {
+        return;
+    }
 
     XRCCTRL(*this, "SB_SHAREDFILES", wxStaticBitmap)->SetBitmap(wxBitmap(sharedfileslist_xpm));
 

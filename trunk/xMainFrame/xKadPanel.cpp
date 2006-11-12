@@ -27,13 +27,15 @@ END_EVENT_TABLE()
 
 xKadPanel::xKadPanel(wxWindow* aParent)
 {
-    wxXmlResource::Get()->LoadPanel(this, aParent, wxT("KAD_PANEL"));
-
+    if (!wxXmlResource::Get()->LoadPanel(this, aParent, wxT("KAD_PANEL")))
+    {
+        return;
+    }
     ContactsLabel=XRCCTRL(*this, "ST_CONTACTS", wxStaticText);
     SearchesLabel=XRCCTRL(*this, "ST_SEARCHES", wxStaticText);
     ContactsListCtrl=XRCCTRL(*this, "LC_CONTACTS", wxListCtrl);
     SearchesListCtrl=XRCCTRL(*this, "LC_SEARCHES", wxListCtrl);
-
+    
     XRCCTRL(*this, "SB_CONTACTS", wxStaticBitmap)->SetBitmap(wxBitmap(contacts_xpm));
     XRCCTRL(*this, "SB_SEARCHES", wxStaticBitmap)->SetBitmap(wxBitmap(currentsearches_xpm));
 

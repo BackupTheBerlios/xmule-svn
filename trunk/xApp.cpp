@@ -175,37 +175,21 @@ int xApp::OnExit()
 bool xApp::InitResources()
 {
     //Check that the XRC resources are available
-    if (!wxFileExists(wxT("xMainFrame.xrc")) && !wxFileExists(wxT("../xMainFrame.xrc")))
+    if (!wxFileExists(wxT("xMainFrame.xrc")))
     {
         wxMessageBox(wxT("xMainFrame.xrc could not be found. Shuting down!"));
         return false; // Terminate app
     }
-    if (!wxFileExists(wxT("xOptions.xrc")) && !wxFileExists(wxT("../xOptions.xrc")))
+    if (!wxFileExists(wxT("xOptions.xrc")))
     {
         wxMessageBox(wxT("xOptions.xrc could not be found. Shuting down!"));
         return false; // Terminate app
     }
 
-    // Load xMainFrame.xrc
     wxXmlResource::Get()->InitAllHandlers();
-    if (wxFileExists(wxT("xMainFrame.xrc")))
-    {
-        wxXmlResource::Get()->Load(wxT("xMainFrame.xrc"));
-    }
-    else
-    {
-        wxXmlResource::Get()->Load(wxT("../xMainFrame.xrc"));
-    }
-
-    // Load xOptions.xrc
-    if (wxFileExists(wxT("xOptions.xrc")))
-    {
-        wxXmlResource::Get()->Load(wxT("xOptions.xrc"));
-    }
-    else
-    {
-        wxXmlResource::Get()->Load(wxT("../xOptions.xrc"));
-    }
+    wxXmlResource::Get()->Load(wxT("xMainFrame.xrc")); // Load xMainFrame.xrc
+    wxXmlResource::Get()->Load(wxT("xOptions.xrc")); // Load xOptions.xrc
+    
     return true;
 }
 

@@ -36,7 +36,10 @@ END_EVENT_TABLE()
 
 xServersPanel::xServersPanel(wxWindow* aParent)
 {
-    wxXmlResource::Get()->LoadPanel(this, aParent, wxT("SERVERS_PANEL"));
+    if (!wxXmlResource::Get()->LoadPanel(this, aParent, wxT("SERVERS_PANEL")))
+    {
+        return;
+    }
 
     ServersLabel=XRCCTRL(*this, "ST_SERVERS", wxStaticText);
     ServersListCtrl=XRCCTRL(*this, "LC_SERVERS", wxListCtrl);
