@@ -1,4 +1,4 @@
-// The xMule Project - A Peer-2-Peer File Sharing Program
+﻿// The xMule Project - A Peer-2-Peer File Sharing Program
 //
 // Copyright (C) 2004-2006 Avi Vahl ( avivahl [AT] gmail.com )
 //
@@ -23,10 +23,11 @@
 #include "xMainFrame/XPMs/SplashScreen.xpm"    // Splash Screen Image
 
 #include <wx/bitmap.h>                 // wxBitmap
-#include <wx/filefn.h>                 // wxFileExists
+#include <wx/filefn.h>                 // wxFileExists, wxGetCwd
 #include <wx/listctrl.h>               // wxListCtrl
 #include <wx/msgdlg.h>                 // wxMessageBox
 #include <wx/splash.h>                 // wxSplashScreen
+#include <wx/stdpaths.h>               // wxStandardPaths
 #include <wx/tooltip.h>                // wxToolTip
 #include <wx/xrc/xmlres.h>             // wxXmlResource
 
@@ -144,11 +145,11 @@ const wxString AppName = wxT("xMule");
 
 bool xApp::OnInit()
 {
-    if (!InitResources()) // Something went wrong with resources loading
-    {
-        return false;
-    }
     SetAppName(AppName);
+    if (!InitResources())
+    {
+        return false; // Something went wrong with resources loading
+    }
 
     wxToolTip::Enable(true); // Enable tooltips globally
     wxToolTip::SetDelay(500);
@@ -174,16 +175,27 @@ int xApp::OnExit()
 
 bool xApp::InitResources()
 {
+    wxString CurrentWorkingDir = wxGetCwd();
+    wxStandardPaths StdPaths;
+    wxString UserDataDir = StdPaths.GetUserDataDir();
     //Check that the XRC resources are available
     if (!wxFileExists(wxT("xMainFrame.xrc")))
     {
-        wxMessageBox(wxT("xMainFrame.xrc could not be found. Shuting down!"));
-        return false; // Terminate app
+        wxString toShow=wxT("xMainFrame.xrc could not be found.");
+        toShow<<wxT("\n\nCurrent Working Directory: ")<<CurrentWorkingDir;
+        toShow<<wxT("\nUser Data Directory: ")<<UserDataDir;
+        toShow<<wxT("\n\nShuting down xMule!"); 
+        wxMessageBox(toShow);
+        return false; // Couldn't initialize resources!
     }
     if (!wxFileExists(wxT("xOptions.xrc")))
     {
-        wxMessageBox(wxT("xOptions.xrc could not be found. Shuting down!"));
-        return false; // Terminate app
+        wxString toShow=wxT("xOptions.xrc could not be found.");
+        toShow<<wxT("\n\nCurrent Working Directory: ")<<CurrentWorkingDir;
+        toShow<<wxT("\nUser Data Directory: ")<<UserDataDir;
+        toShow<<wxT("\n\nShuting down xMule!"); 
+        wxMessageBox(toShow);
+        return false; // Couldn't initialize resources!
     }
 
     wxXmlResource::Get()->InitAllHandlers();
